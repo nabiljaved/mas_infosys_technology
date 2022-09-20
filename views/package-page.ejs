@@ -1,0 +1,183 @@
+<style>
+  .dashboard_main_wrapper {
+
+    padding: 50px;
+
+  }
+</style>
+
+<%- include('partials/dropdown'); -%>
+
+  <div class="dashboard_main_wrapper">
+
+
+    <h1 class="lead">Add Package</h1>
+
+    <form action="/add-package" enctype="multipart/form-data" method="post" id="form">
+
+      <div class="form-group">
+        <label for="package_location">Location</label>
+        <input type="text" class="form-control" id="package_location">
+      </div>
+
+
+      <div class="form-group">
+        <label for="exampleInputTopicName" for="package_selection"> Select a Package</label>
+        <select class="form-control" name="package_selection" id="package_selection">
+          <option value="Regular Package"> Regular Package</option>
+          <option value="Standard Package"> Standard Package</option>
+          <option value="New To Canada Package"> New To Canada Package</option>
+          <option value="Dgital Package"> Dgital Package </option>
+
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="package_address">Address</label>
+        <input type="text" class="form-control" id="package_address">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea class="form-control" id="editor" rows="5"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="package_price">Price</label>
+        <input type="text" class="form-control" id="package_price">
+      </div>
+
+      <div class="form-group">
+        <label for="package_time">Timing</label>
+        <input type="text" class="form-control" id="package_time">
+      </div>
+
+      <div class="form-group">
+        <label for="package_service">Services</label>
+        <input type="text" class="form-control" id="package_service">
+      </div>
+
+      <div class="form-group">
+        <label for="package_phone">Phone</label>
+        <input type="text" class="form-control" id="package_phone">
+      </div>
+
+
+      <div class="form-group">
+        <label for="exampleInputTopicName"> News photo </label>
+        <input type="file" name="newsPhoto" class="form-control" id="exampleInputTopicName"
+          aria-describedby="topicNameHelp">
+      </div>
+
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+  <script>
+
+
+    var form = document.querySelector('#form');
+    form.addEventListener('submit', addPromotion);
+    const backdrop = document.querySelector('.backdrop')
+
+    function addPromotion(e)
+    {
+      e.preventDefault();
+      //backdrop.style.display = "block";
+
+      const location = document.getElementById('package_location').value;
+      const package = document.getElementById('package_selection').value;
+      const address = document.getElementById('package_address').value;
+      const description = document.getElementById('editor').value;
+      const price = document.getElementById('package_price').value;
+      const service = document.getElementById('package_service').value;
+      const phone = document.getElementById('package_phone').value;
+      const time = document.getElementById('package_time').value;
+
+      if (location === '' || package === '' || address === '' || description === ''
+        || price === '' || service === ''
+        || phone === '' || time === '')
+      {
+        UI.showAlert('Please fill in all fields', 'danger');
+
+        return;
+      }
+
+
+
+      var data = {
+        "location": location,
+        "package": package,
+        "address": address,
+        "description": description,
+        "price": price,
+        "service": service,
+        "phone": phone,
+        "time": time
+      }
+
+      console.log(data)
+      //  backdrop.style.display = "none";
+      // backdrop.style.display = "none";
+
+      fetch('/admin-dashboard/add-package', {
+        method: 'post',
+        body: JSON.stringify(data),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          "Access-Control-Allow-Origin": "/admin-dashboard/add-package"
+        }
+      }).then(function (response)
+      {
+        return response.json();
+      }).then(function (data)
+      {
+        if (data)
+        {
+          //location.reload() 
+          //console.log(data)
+          UI.emptyFields();
+          UI.showAlert("Package is added success fully", "success")
+        }
+      });
+
+    }
+
+    class UI
+    {
+
+
+      static showAlert(message, className)
+      {
+        const div = document.createElement('div');
+        div.className = `alert alert-${className}`;
+        div.appendChild(document.createTextNode(message));
+        const container = document.querySelector('.dashboard_main_wrapper');
+        const form = document.querySelector('#form');
+        container.insertBefore(div, form);
+
+        // Vanish in 3 seconds
+        setTimeout(() => document.querySelector('.alert').remove(), 3000);
+      }
+
+
+      static emptyFields()
+      {
+        document.getElementById('package_location').value = "";
+        document.getElementById('package_selection').value = "";
+        document.getElementById('package_address').value = "";
+        document.getElementById('editor').value = "";
+        document.getElementById('package_price').value = "";
+        document.getElementById('package_service').value = "";
+        document.getElementById('package_phone').value = "";
+        document.getElementById('package_time').value = "";
+
+      }
+
+    }
+
+  </script>

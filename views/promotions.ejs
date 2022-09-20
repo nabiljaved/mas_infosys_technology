@@ -1,0 +1,63 @@
+<%- include('partials/header'); -%>
+
+  <div class="promotion_container">
+    <div class="heading">
+      <h1>Web Trica All current promotions</h1>
+    </div>
+    <div class="row">
+        
+    </div>
+
+  <script>
+    
+
+    document.addEventListener('DOMContentLoaded', fecthPromotions);
+
+
+
+    async function fecthPromotions()
+    {
+
+      const row = document.querySelector('.row');  
+
+      try {
+      const res = await fetch('/promotions', { 
+        method: 'GET', 
+      });
+      const data = await res.json();
+      
+      const item = data.promotions
+
+      item.forEach(function(item){
+        row.innerHTML += `
+        
+    <div class="card">
+        <div class="card-header">
+            <img src="${item.imageurl}"/>
+        </div>
+        <div class="card-body">
+          <h1>Promotion Title</h1>
+          <p style="margin-bottom:10px">
+            ${item.title}
+          </p>
+
+          <h1>Promotion Description</h1>
+          <p style="margin-bottom:10px">
+            ${item.description}
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+        `;
+    });
+  
+      // items.appendChild(row);
+    }
+      catch (err) {
+      //console.log(err);
+    }
+  }
+
+  </script>
+  
+<%- include('partials/footer'); -%>

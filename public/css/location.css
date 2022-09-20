@@ -1,0 +1,66 @@
+body
+{
+	background-color: #001216;
+}
+
+.location-nav-bar-1
+{
+    background: #000000bf;
+    padding: 20px;
+}
+
+.location-bg-1-div-1
+{
+	background-color: #000000a8;
+}
+
+
+.logo-1
+{
+	width: 160px;
+    margin: auto;
+    display: block;
+}
+
+
+
+.location-bg-1
+{
+    background-image: url(../img/location-img-1.jpg);
+    height: 580px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.location-bg-1-text-1
+{
+	color: white;
+	font-size: 30px;
+	font-family: cursive;
+	transition: 0.7s;
+}
+
+.location-bg-1-text-1:hover
+{
+color: #ee1d25;
+text-decoration: none;
+}
+
+.mt-6
+{
+
+    margin-top: 55px;
+
+}
+
+
+.location-bg-1-text-2
+{
+	margin-bottom: 12px;
+
+}
+
+.make-payment-select-1
+{
+	
+}

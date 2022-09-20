@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/videopage.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MAS Infosys</title>
+</head>
+<body>
+     <!-- Video Source -->
+  <!-- https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
+  <section class="showcase">
+      <header>
+        <div class="logo_section">
+         <a href="home"><img src="./img/mass_logo.png" /></a>    
+        <!-- <h2 class="logo">Nabeel Tech</h2> -->
+        </div>
+        <div class="toggle"></div>
+      </header>
+    <video src="./video/augmented-reality.mp4" muted loop autoplay></video>
+    <!-- <div class="overlay"></div> -->
+    <div class="text">
+      <h2 class="movetext">WE SURELY BRING </h2> 
+      <h3 class="movetext">THE RIGHT TECHNOLOGY</h3>
+      <p class="movetext">MAS Infosys is a Leading provider of physical infrastructure solutions for the entire Data Center and its life cycle in GCC. Our Solution simplify and speed up planning, designing and building your data center</p>
+      <a href="home">Explore</a>
+    </div>
+    <ul class="social">
+      <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square" style="font-size:48px;"></i></a></li>
+      <li><a href="https://twitter.com"><i class="fa fa-twitter-square" style="font-size:48px;"></i></a></li>
+      <li><a href="https://www.instagram.com"><i class="fa fa-instagram" style="font-size:48px;"></i></i></a></li>
+    </ul>
+  </section>
+  <div class="menu">
+    <ul>
+      <li><a href="./home">Home</a></li>
+      <!-- <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li> -->
+    </ul>
+  </div>
+  <script>
+       const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      })
+  </script>
+</body>
+</html>

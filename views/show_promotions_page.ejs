@@ -1,0 +1,105 @@
+<style>
+    .dashboard_main_wrapper {
+        padding: 20px;
+    }
+</style>
+
+
+<div class="dashboard_main_wrapper">
+
+
+    <h1 class="display-3" style="text-align: center;">All Promotions</h1>
+
+
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i> All News </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <th> Title</th>
+                        <th> Description </th>
+                        <th> Expire</th>
+                        <th> City </th>
+                        <th> Added By </th>
+                        <th> Actions </th>
+                    </thead>
+
+                    <tfoot>
+                        <th> Title</th>
+                        <th> Description </th>
+                        <th> Expire</th>
+                        <th> City </th>
+                        <th> Added By </th>
+                        <th> Actions </th>
+                    </tfoot>
+
+                    <tbody id="table-body">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        class UI {
+
+            static getContacts = async() => {
+
+                //let locations = ['Missisaga', 'brampton', 'calgery', 'Toronto', 'Otawa'];
+
+                let contacts = [];
+
+                try {
+
+                    const res = await fetch('/driving-school-promotions', {
+                        method: 'GET',
+                    });
+                    const data = await res.json();
+                    contacts = data;
+
+                    if (data.errors) {
+
+                    }
+                    if (data) {
+
+                        console.log(contacts)
+
+                        const body = document.getElementById('table-body')
+
+                        contacts.map(contact => {
+
+                            body.innerHTML += `
+
+                            <tr>
+                                <td>${contact.title}</td>
+                                <td> ${contact.description.substring(0, 25)}....</td>
+                                <td>${contact.expire}</td>
+                                <td>${contact.city}</td>
+                                <td>${contact.useremail}</td>
+                                <td> <a href="#" class="btn btn-outline-primary btn-sm"> Edit </a> | <a href="" class="btn btn-outline-danger btn-sm"> Delete </a> </td>
+                            </tr>
+
+                            `
+
+                        })
+
+                    }
+
+
+                } catch (error) {
+
+                }
+
+            }
+
+        }
+
+        // Event: Display Locations
+        document.addEventListener('DOMContentLoaded', UI.getContacts);
+    </script>

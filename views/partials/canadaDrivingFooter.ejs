@@ -1,0 +1,133 @@
+
+<footer class="section-top-1 ">
+
+<div class="container">
+  <div class="row">
+  <div class="col-sm-3">
+    <img src="img/logo.png" class="img-fluid">
+  </div>
+  <div class="col-sm-3 ">
+   <p class="footer-text-1"> Helpful Links</p>
+   <p class="footer-text-2">
+Our Services</p>
+   <p class="footer-text-2">
+   Registration Form</p>
+   <p class="footer-text-2">
+
+FAQs</p>
+   <p class="footer-text-2">
+Make Payment</p>
+   <p class="footer-text-2">
+     
+     <select class="make-payment-select-2" name="forma1" id="show_locations">
+           
+    </select>
+  
+  </p>
+
+  </div>
+  <div class="col-sm-3">
+<p class="footer-text-1"> Helpful Links</p>
+   <p class="footer-text-2">
+                <a href="about.html" class="nav-link1" href="about.html">About Us</a>
+</p>
+   <p class="footer-text-2">
+   Registration Form</p>
+   <p class="footer-text-2">
+                <a href="video.html" class="nav-link1" href="#">Videos</a>
+           
+</p>
+   <p class="footer-text-2">
+                <a href="faq.html" class="nav-link1" href="#">FAQ</a>
+</p>
+   <p class="footer-text-2">
+    Packages
+</p>
+  </div>
+  <div class="col-sm-3">
+    <div class="row">
+                  <span class="footericon1 footer-text-1 mb-3 pl-3">Connected Us</span>
+
+                  <div class="col-sm-12">
+                      <!-- Add font awesome icons -->
+                      <a href="#" class="fa footericon fa-facebook"></a>
+                      <a href="#" class="fa footericon fa-twitter"></a>
+                      <a href="#" class="fa footericon fa-google"></a>
+                      <a href="#" class="fa footericon fa-linkedin"></a>
+
+                  </div>
+
+
+
+
+<img src="img/mto-approved.jpg" class="mt-4">
+              </div>
+
+  </div>
+</div>
+</div>
+
+</footer>
+
+<script>
+
+  
+   class UI{
+   
+     static getLocations = async () => {
+ 
+     //let locations = ['Missisaga', 'brampton', 'calgery', 'Toronto', 'Otawa'];
+ 
+     let locations = [];
+ 
+      try {
+        
+       const res = await fetch('/driving-school-location', { 
+         method: 'GET', 
+       });
+       const data = await res.json();
+       locations = data;
+        
+       if (data.errors) {
+      
+       }
+       if (data) {
+         // location.assign('/admin-dashboard');
+         const containers = document.querySelectorAll('#show_locations')
+         //console.log(containers)
+ 
+         containers.forEach(container => {
+ 
+              //console.log(locations)
+         locations.map(location => {
+ 
+         container.innerHTML += `
+         <option>${location.location}</option>
+         `
+     })
+ 
+ })
+ 
+ 
+       }
+ 
+ 
+      } catch (error) {
+        
+      }
+     
+ }
+   
+   }
+ 
+    // Event: Display Locations
+    document.addEventListener('DOMContentLoaded', UI.getLocations);
+    document.addEventListener('click',UI.chooseLocation);
+
+
+   
+
+
+
+    
+   </script>

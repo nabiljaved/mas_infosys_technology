@@ -1,0 +1,211 @@
+<style>
+    .dashboard_main_wrapper {
+        padding: 20px;
+    }
+</style>
+
+
+<div class="dashboard_main_wrapper">
+
+
+    <h1 class="display-3" style="text-align: center;">Applied For Jobs</h1>
+
+
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i> All Bookings </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <th> Name</th>
+                        <th> Email </th>
+                        <th> Phone</th>
+                        <th> Subject </th>
+                        <th> Message </th>
+                        <th> Action </th>
+                    </thead>
+
+                    <tfoot>
+                        <th> Name</th>
+                        <th> Email </th>
+                        <th> Phone</th>
+                        <th> Subject </th>
+                        <th> Message </th>
+                        <th> Action </th>
+                    </tfoot>
+
+                    <tbody id="table-body">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!--modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Job</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/contact-us" class="mt-5" id="form" method="post">
+
+
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" placeholder="Name" name="name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" placeholder="Email" name="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" placeholder="Phone" id="phone">
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" class="form-control" placeholder="Subject" name="subject" id="subject">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea class="form-control" placeholder="Message" name="message" id="message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn make-payment-btn-1 btn-warning">Update</button>
+
+                        <button type="submit" class="btn make-payment-btn-1 btn-danger">Delete</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class Jobs {
+
+            constructor(name, email, phone, subject, message) {
+                this.name = name;
+                this.email = email;
+                this.phone = phone;
+                this.subject = subject;
+                this.message = message
+            }
+
+        }
+
+        class UI {
+
+
+            static myFunction()
+
+            {
+
+                let values = [];
+
+                const row = document.getElementById('clicked_row').parentElement;
+
+                var row_value = "";
+
+                for (var j = 0; j < (row.cells.length) - 1; j++) {
+
+                    values.push(row.cells[j].innerHTML)
+                }
+                console.log(values)
+                const user = new Jobs(values[0], values[1], values[2], values[3], values[4])
+
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const phone = document.getElementById('phone');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+
+
+
+
+                name.value = user.name
+                email.value = user.email
+                phone.value = user.phone
+                subject.value = user.subject
+                message.value = user.message
+
+            }
+
+            static getJobs = async() => {
+
+                //let locations = ['Missisaga', 'brampton', 'calgery', 'Toronto', 'Otawa'];
+
+                let jobs = [];
+
+                try {
+
+                    const res = await fetch('/driving-school-jobs', {
+                        method: 'GET',
+                    });
+                    const data = await res.json();
+                    jobs = data;
+
+                    if (data.errors) {
+
+                    }
+                    if (data) {
+
+                        console.log(data)
+
+                        const body = document.getElementById('table-body')
+
+                        jobs.map(job => {
+
+                            body.innerHTML += `
+
+                            <tr>
+                                <td>${job.name}</td>
+                                <td> ${job.email}....</td>
+                                <td> ${job.phone}....</td>
+                                <td> ${job.subject}....</td>
+                                <td> ${job.message}....</td>
+
+                                <td id="clicked_row"> <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-info btn-sm" onclick="UI.myFunction()"> View </a> </td> 
+                                
+                             </tr>
+                            `
+
+                        })
+
+
+
+
+
+                    }
+
+
+                } catch (error) {
+
+                }
+
+            }
+
+        }
+
+        // Event: Display Locations
+        document.addEventListener('DOMContentLoaded', UI.getJobs);
+    </script>

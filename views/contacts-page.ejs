@@ -1,0 +1,75 @@
+<style>
+
+  .dashboard_main_wrapper{
+      
+          padding: 50px;
+      }
+      
+      </style>
+
+
+      <div class="dashboard_main_wrapper">
+
+          <h1 class="lead">Add Contact</h1>
+
+          <form action="/news/post-form" enctype="multipart/form-data" method="post">
+
+              <div class="form-group">
+                  <label for="exampleInputTopicName" for="location"> Location</label>
+                  <input type="text" class="form-control" id="exampleInputTopicName" aria-describedby="topicNameHelp"
+                      placeholder="Enter Location" name="location" id="location">
+              </div>
+
+              
+              <div class="form-group">
+                  <label for="exampleInputTopicName" for="package_selection"> Select a Package</label>
+                  <select class="form-control" name="package_selection" id="package_selection"> 
+                      <option value="news"> Regular Package</option>    
+                      <option value="news"> Standard Package</option>   
+                      <option value="news"> New To Canada Package</option>   
+                      <option value="news"> Dgital Package </option>   
+
+                  </select>
+              </div>
+          
+              <div class="form-group">
+                  <label for="exampleInputTopicName" for="title">Title</label>
+                  <input type="text" class="form-control" id="exampleInputTopicName" aria-describedby="topicNameHelp"
+                      placeholder="Enter title" name="title" id="title">
+              </div>
+
+              <div class="form-group">
+                  <label for="exampleInputTopicName"> Description </label>
+                  <textarea id="editor1" name="news_detail"></textarea>
+              </div>
+
+              <div class="form-group">
+                  <label for="exampleInputTopicName" for="price">Price</label>
+                  <input type="text" class="form-control" id="exampleInputTopicName" aria-describedby="topicNameHelp"
+                      placeholder="Enter Price" name="price" id="price">
+              </div>
+
+              <div class="form-group">
+                  <label for="exampleInputTopicName" for="valid">Validity</label>
+                  <input type="text" class="form-control" id="exampleInputTopicName" aria-describedby="topicNameHelp"
+                      placeholder="Enter Validity" name="valid" id="valid">
+              </div>
+          
+              <div class="form-group">
+                  <label for="exampleInputTopicName"> Expires</label>
+                  <input type="text" class="form-control" id="exampleInputTopicName" aria-describedby="topicNameHelp"
+                      placeholder="Enter news source" name="expires" id="expires">
+              </div>
+            
+              
+              <div class="form-group">
+                  <label for="exampleInputTopicName"> News photo </label>
+                  <input type="file" name="newsPhoto" class="form-control" id="exampleInputTopicName" aria-describedby="topicNameHelp">
+              </div>
+
+      
+      
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+  
+      </div>

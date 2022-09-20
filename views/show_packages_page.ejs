@@ -1,0 +1,128 @@
+<style>
+
+    .dashboard_main_wrapper{
+        
+            padding: 10px;
+        }
+        
+        </style>
+
+
+        <div class="dashboard_main_wrapper">
+
+
+            <h1 class="display-3" style="text-align: center;">All Promotions</h1>
+
+        
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    All News </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <th> Location</th>
+                                <th> Package</th>
+                                <th> Description</th>
+                                <th> Adress </th>
+                                <th> Price </th>
+                                <th> Service </th>
+                                <th> Phone </th>
+                                <th> Time </th>
+                                <th> Added By  </th>
+                                <th>Actions</th>
+                            </thead>
+            
+                            <tfoot>
+                                <th> Location</th>
+                                <th> Package</th>
+                                <th> Description</th>
+                                <th> Adress </th>
+                                <th> Price </th>
+                                <th> Service </th>
+                                <th> Phone </th>
+                                <th> Time </th>
+                                <th> Added By  </th>
+                                <th>Actions</th>
+                            </tfoot>
+            
+                            <tbody id="table-body">
+                                
+                                      
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+            </div>
+
+
+            <script>
+
+  
+                class UI{
+                
+                  static getContacts = async () => {
+              
+                  //let locations = ['Missisaga', 'brampton', 'calgery', 'Toronto', 'Otawa'];
+              
+                  let allpackages = [];
+              
+                   try {
+                     
+                    const res = await fetch('/driving-school-packages', { 
+                      method: 'GET', 
+                    });
+                    const data = await res.json();
+                    
+                    allpackages = data;
+                     
+                    if (data.errors) {
+                   
+                    }
+                    if (data) {
+
+                        console.log(allpackages)
+
+                        const table_body = document.getElementById('table-body')
+                        console.log(table_body)
+
+                        allpackages.map(packg => {
+                           
+                            table_body.innerHTML += `
+                            <tr>
+                                <td>${packg.location}</td>
+                                <td>${packg.package}</td>
+                                <td>${packg.options[0].description}</td>
+                                <td>${packg.options[0].address}</td>
+                                <td>${packg.options[0].price}</td>
+                                <td>${packg.options[0].service}</td>
+                                <td>${packg.options[0].phone}</td>
+                                <td>${packg.options[0].time}</td>
+                                <td>${packg.useremail}</td>
+                                <td> <a href="#" class="btn btn-outline-primary btn-sm"> Edit </a> | <a href="" class="btn btn-outline-danger btn-sm"> Delete </a> </td>
+                            </tr>
+                           
+                            `
+
+                            
+                            
+                        })
+
+                    }
+              
+              
+                   } catch (error) {
+                     
+                   }
+                  
+              }
+                
+                }
+              
+                 // Event: Display Locations
+                 document.addEventListener('DOMContentLoaded', UI.getContacts);
+                 
+                </script>
+              

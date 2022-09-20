@@ -1,0 +1,104 @@
+<style>
+    .dashboard_main_wrapper {
+        padding: 20px;
+    }
+</style>
+
+
+<div class="dashboard_main_wrapper">
+
+
+    <h1 class="display-3" style="text-align: center;">People Who Contacted Us</h1>
+
+
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i> Contacted Us </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <th> Name</th>
+                        <th> Email </th>
+                        <th> Phone</th>
+                        <th> Subject </th>
+                        <th> Message </th>
+                        <th> Message </th>
+
+                    </thead>
+
+                    <tfoot>
+                        <th> Name</th>
+                        <th> Email </th>
+                        <th> Phone</th>
+                        <th> Subject </th>
+                        <th> Message </th>
+                        <th> Message </th>
+                    </tfoot>
+
+                    <tbody id="table-body">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        class UI {
+
+            static getContacts = async() => {
+
+                //let locations = ['Missisaga', 'brampton', 'calgery', 'Toronto', 'Otawa'];
+
+                let bookings = [];
+
+                try {
+
+                    const res = await fetch('/driving-school-jobs-people-contacted-us', {
+                        method: 'GET',
+                    });
+                    const data = await res.json();
+                    bookings = data;
+
+                    if (data.errors) {
+
+                    }
+                    if (data) {
+
+                        console.log(data)
+
+                        const body = document.getElementById('table-body')
+
+                        bookings.map(booking => {
+
+                            body.innerHTML += `
+
+                            <tr>
+                                <td>${booking.name}</td>
+                                <td> ${booking.email}....</td>
+                                <td> ${booking.phone}....</td>
+                                <td> ${booking.subject}....</td>
+                                <td> ${booking.message}....</td>
+                                <td id="clicked_row"> <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-info btn-sm" onclick="UI.myFunction()"> View </a> </td> 
+                            `
+
+                        })
+
+                    }
+
+
+                } catch (error) {
+
+                }
+
+            }
+
+        }
+
+        // Event: Display Locations
+        document.addEventListener('DOMContentLoaded', UI.getContacts);
+    </script>
