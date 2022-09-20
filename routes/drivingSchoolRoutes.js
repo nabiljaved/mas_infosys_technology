@@ -41,6 +41,16 @@ router.get('/home', (req, res) => res.render('home'));
 router.get('/company-overview', (req, res) => res.render('masinfosysCompanyOverview'));
 router.get('/about', (req, res) => res.render('masinfoabout'));
 router.get('/contact-us', (req, res) => res.render('masinfocontactus'));
+router.get('/server-client', (req, res) => res.render('servicesclient'));
+router.get('/storage-backup', (req, res) => res.render('storagebackup'));
+router.get('/network-security', (req, res) => res.render('networksecurity'));
+router.get('/data-center', (req, res) => res.render('datacenter')); 
+router.get('/server-virtualization', (req, res) => res.render('servervirtualization'));
+router.get('/professional-installation', (req, res) => res.render('proinstall'));
+router.get('/professional-support', (req, res) => res.render('prosupport'));
+router.get('/professional-consulting', (req, res) => res.render('proconsult'));
+
+
 router.get('/package', (req, res) => res.render('package'));
 router.get('/job-opportunity', (req, res) => res.render('job-opportunity'));
 router.get('/make-payment', (req, res) => res.render('make-payment'));
