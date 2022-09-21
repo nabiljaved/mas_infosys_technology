@@ -8,21 +8,20 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff;
-    color: #000;
+    font-family: 'Rubik', sans-serif;
+    line-height: 26px;
+    font-weight: 400;
+    font-style: normal;
+    color: #424141;
     font-size: 15px;
-    line-height: 1.5;
 }
 
-a {
-  color: #4fa6d5;
-  text-decoration: none;
-}
 
 a:hover {
-  color: #45beff;
   text-decoration: none;
 }
 
@@ -72,12 +71,117 @@ h6,
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
+ /* Showcase */
+ .showcase1 {
+  width: 100%;
+  height: 500px;
+  background: url('https://i.dell.com/is/image/DellContent/content/dam/uwaem/production-design-assets/en/apex/images/overview/apex-overview-promo-rectangular-blue.jpg?wid=1280&fit=constrain') no-repeat center center/cover;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.content
+{
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+
+.content p
+{
+  margin: 10px 0 20px;
+  position: relative;
+  animation: paragraph_anim;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.content h2
+{
+  position: relative;
+  animation: heading_anim;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heading_anim {
+  0%   {left: -600px;}
+  100% {left: 0px;}
+}
+
+@keyframes paragraph_anim {
+  0%   {left: -600px;}
+  100% {left: 0px;}
+}
+
+.btn_showcase a:hover
+{
+  background-color:#b32318 !important;
+}
+
+
+.btn_showcase a{
+  opacity: 0;
+  animation-name: btn_anim;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btn_anim {
+  0%   {opacity:0}
+  100% {opacity: 1}
+}
+
+
+.span_seperator
+{
+  border-top-width: 5px;
+  border-color: #cfc9c9;
+  
+}
+
+.header_top_item p
+{
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 11px;
+  color: #fff;
+  line-height: 23px;
+  letter-spacing: 1px;
+}
+
+.header_navbar ul li a:hover
+{
+  background-color: red !important;
+  font-weight: bolder;
+  color: white;
+}
+
+
+
 #header {
   height: 9.5rem;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #1e4356;
+  background: white;
+}
+
+.general_paragraph
+{
+    font-family: 'Rubik', sans-serif;
+    line-height: 26px;
+    font-weight: 400;
+    font-style: normal;
+    color: #424141;
+    font-size: 17px;
+    text-align: justify;
 }
 
 #header.header-transparent {
@@ -109,7 +213,7 @@ h6,
 #header .logo img {
   padding: 0;
   margin: 0;
-  height: 8rem;
+  height: 6rem;
 }
 
 #main {
@@ -138,17 +242,20 @@ h6,
   position: relative;
 }
 
-.navbar a,
-.navbar a:focus {
+
+.navbar a {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  color: black;
+  font-size: 18px;
+  color:#706c67;
   white-space: nowrap;
-  transition: 1s;
+  transition: all 0.3s ease-in-out !important;
+  cursor: pointer;
+  font-family: Rubik;
+  font-weight: 400;
+  margin-top: 0.4rem;
 }
 
 .navbar a i,
@@ -158,20 +265,19 @@ h6,
   margin-left: 5px;
 }
 
-.navbar a:hover,
-/* .navbar .active, */
+/* .navbar a:hover,
 .navbar .active:focus,
 .navbar li:hover>a {
   background-color: #B22217;
   color: white;
   border-radius: 20px;
-}
+} */
 
 .navbar .dropdown ul {
   display: block;
   position: absolute;
-  left: 14px;
-  top: calc(100% + 30px);
+  /* left: 14px; */
+  /* top: calc(100% + 30px); */
   margin: 0;
   padding: 10px 0;
   z-index: 99;
@@ -197,11 +303,11 @@ h6,
   font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover,
+/* .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
   color: #68A4C4;
-}
+} */
 
 .navbar .dropdown:hover>ul {
   opacity: 1;
@@ -2646,11 +2752,11 @@ transform: scale(1.1);
   
 }
 
-.internal_links :hover
+/* .internal_links :hover
 {
   color: white !important;
   padding: 0.5rem;
-}
+} */
 
 .overview_card
 {

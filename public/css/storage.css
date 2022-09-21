@@ -1,12 +1,8 @@
 .img_container
 {
-
   width: 70%;
   margin: 0 auto;
   height: 20.5rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-  transition: all 0.7s ease-in;
-
 }
 
 .img_container img{
@@ -15,8 +11,5 @@
  
 }
 
-.img_container:hover{
-  transform: scale(0.9); 
-}
 
  

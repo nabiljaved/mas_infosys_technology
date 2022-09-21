@@ -1,296 +1,124 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-*
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+:root {
+	--primary-color: #3a4052;
 }
-header
-{
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 60px;
+	line-height: 1.2;
+	margin-bottom: 15px;
+}
+
+.showcase {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
+		center/cover;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo
-{
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.toggle
-{
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
 }
 
-.logo_section{
-  display:flex
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
 }
 
-.logo_section img{
-  height: 100px;
-  margin-right: 0.5rem;
-} 
-
-.toggle.active
-{
-  background: url(https://i.ibb.co/rt3HybH/close.png);
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
-  cursor: pointer;
-}
-.showcase
-{
-  position: absolute;
-  right: 0;
-  width: 100%;
-  min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  transition: 0.5s;
-  z-index: 2;
-}
-.showcase.active
-{
-  right: 300px;
+.content {
+	z-index: 2;
 }
 
-.showcase video
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-}
-.overlay
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #3d3f41;
-  mix-blend-mode: overlay;
-}
-.text
-{
-  position: relative;
-  z-index: 10;
-  animation-name:content;
-  animation-duration:1s;
-  animation-fill-mode:forwards;
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	background: var(--primary-color);
+	color: #fff;
+	border-radius: 5px;
+	border: solid #fff 1px;
+	margin-top: 25px;
+	opacity: 0.7;
 }
 
-
-@keyframes content{
-  0%{right:-500%}
-  100%{right:0%}
+.btn:hover {
+	transform: scale(0.98);
 }
 
-.text h2
-{
-  font-size: 5rem;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-.text h3
-{
-  font-size: 4rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-.text p
-{
-  font-size: 1.1rem;
-  color: white;
-  margin: 20px 0;
-  font-weight: 400;
-  max-width: 700px;
-  
+#about {
+	padding: 40px;
+	text-align: center;
 }
 
-.text a
-{
-  display: inline-block;
-  font-size: 1em;
-  background: #fff;
-  padding: 10px 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  color: #111;
-  letter-spacing: 2px;
-  transition-property: transform;
-  opacity:0;
-  transition-duration:1s;
-  transition: all 0.5s ease-in;
-  animation-name:btn;
-  animation-duration:5s;
-  animation-delay:1s;
-  animation-fill-mode:forwards;
+#about p {
+	font-size: 1.2rem;
+	max-width: 600px;
+	margin: auto;
 }
 
-
-@keyframes btn{
-    0%{opacity:0%}
-    100%{opacity:100%}
+#about h2 {
+	margin: 30px 0;
+	color: var(--primary-color);
 }
 
-.text a:hover
-{
-  letter-spacing: 6px;
-  /* transform: rotateY(180deg); */
-  background-color: #B22217;
-  color: #fff;
-}
-.social
-{
-  position: absolute;
-  z-index: 10;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.social li
-{
-  list-style: none;
-}
-.social li a
-{
-  display: inline-block;
-  margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.social li a:hover
-{
-  transform: scale(0.5) translateY(-15px);
-}
-.menu
-{
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu ul
-{
-  position: relative;
-}
-.menu ul li
-{
-  list-style: none;
-}
-.menu ul li a
-{
-  text-decoration: none;
-  font-size: 24px;
-  color: #111;
-}
-.menu ul li a:hover
-{
-  color: #03a9f4; 
+.social a {
+	margin: 0 5px;
 }
 
-@media (max-width: 991px)
+.transparent_navbar
 {
-  .showcase,
-  .showcase header
-  {
-    padding: 40px;
-  }
-  .text h2
-  {
-    font-size: 3em;
-  }
-  .text h3
-  {
-    font-size: 3em;
-  }
+    background-color: transparent; 
+	width: 100%;
+	height: 50px; 
+	position: absolute;
+	top:0;
+	left: 0;
+	color: white;
+	padding: 20px 200px;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: right;
 }
-
-@media (max-width: 768px)
-{
-  .logo_section img{
-    display:none;
-  }
-
-  .showcase,
-  .showcase header
-  {
-    padding: 20px;
-  }
-  .text h2
-  {
-    font-size: 2em;
-  }
-  .text h3
-  {
-    font-size: 2em;
-  }
-  .text p
-  {
-    font-size: 2em;
-  }
-}
-
-@media (max-width: 685px)
-{
-  .logo_section img{
-    display:none;
-  }
-
-  .showcase,
-  .showcase header
-  {
-    padding: 10px;
-  }
-  .text h2
-  {
-    font-size: 1em;
-  }
-  .text h3
-  {
-    font-size: 1em;
-  }
-  .text p
-  {
-    font-size: 1em;
-  }
-}
-
-
-
-
