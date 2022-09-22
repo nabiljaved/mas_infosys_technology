@@ -16,7 +16,6 @@ html,body{
   height: 100%;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
@@ -205,7 +204,16 @@ h6,
   background: white;
 }
 
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
 #header.header-scrolled {
+  position: fixed;
   background: white;
   height: 9.875rem;
   border-bottom: 3px solid whitesmoke
