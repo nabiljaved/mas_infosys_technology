@@ -192,6 +192,15 @@ h6,
     text-align: justify;
 }
 
+.heading_style{
+    font-family: 'Rubik', sans-serif;
+    line-height: 25px;
+    font-weight: 600;
+    font-style: normal;
+    color: #131313;
+    font-size: 1.5rem;
+}
+
 #header.header-transparent {
   background: white;
 }
