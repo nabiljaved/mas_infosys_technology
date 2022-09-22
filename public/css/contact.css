@@ -8,8 +8,7 @@
   .back_div {
 
   background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-  url("https://www.channelfutures.com/files/2018/08/Data-Center-IT-People-2018.jpg") center/cover no-repeat border-box,
-    #ff1b68;
+  url("https://www.channelfutures.com/files/2018/08/Data-Center-IT-People-2018.jpg") center/cover no-repeat border-box;
   /* background-image: url("freedom.jpg");
     background-size: cover;
     background-position: left 10% bottom 20%; */
@@ -281,5 +280,11 @@
   {
      background-color: #252212;
      margin-left: 5px;
+  }
+
+  @media (max-width:768px) {
+      .app-contact {
+      margin-top: 50px;
+    }
   }
 
