@@ -1,0 +1,37 @@
+
+
+.footer{
+    
+    width: 100%;
+    background:#b32318;
+    text-align: center;
+    color: #f4f4f4;
+    height: 63px;
+    display: flex;
+    align-items:center; 
+    justify-content:center
+}
+
+
+.company-name{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11px;
+    color: #fff;
+    line-height: 23px;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+    html{
+    font-size: 50%;
+    }
+}    

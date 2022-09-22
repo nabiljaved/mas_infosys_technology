@@ -36,7 +36,7 @@ router.get('/driving-school-jobs-people-contacted-us', apiController.getPeopleCo
 
 
 //Routes Canadian Digital driving School ----- Render company-overview
-router.get('/', (req, res) => res.render('index'));
+router.get('/', (req, res) => res.render('home'));
 router.get('/home', (req, res) => res.render('home'));
 router.get('/company-overview', (req, res) => res.render('masinfosysCompanyOverview'));
 router.get('/about', (req, res) => res.render('masinfoabout'));

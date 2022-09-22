@@ -136,7 +136,7 @@
     font-size: 26px;
   }
   
-  .app-title:after {
+  /* .app-title:after {
     content: '';
     display: block;
     position: absolute;
@@ -145,7 +145,7 @@
     width: 25px;
     height: 4px;
     background: #ea1d6f;
-  }
+  } */
   
   .app-contact {
     margin-top: auto;
@@ -190,7 +190,7 @@
   .app-form-button {
     background: none;
     border: none;
-    color: #ea1d6f;
+    color: #b9134f;
     font-size: 14px;
     cursor: pointer;
     outline: none;
@@ -205,7 +205,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    color: #ffa4bd;
+    color: white;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
     font-weight: normal;
