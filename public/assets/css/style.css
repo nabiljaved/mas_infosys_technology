@@ -198,7 +198,7 @@ h6,
     font-weight: 600;
     font-style: normal;
     color: #131313;
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 
 #header.header-transparent {
@@ -405,6 +405,7 @@ h6,
   background-color: #fff;
   overflow-y: auto;
   transition: 0.3s;
+  z-index: 2000;
 }
 
 .navbar-mobile a,
@@ -2843,7 +2844,7 @@ transform: scale(1.1);
   color:white; 
   width:400px; 
   text-align: center;
-  
+  margin-bottom: 10px;
 }
 
 .site_navbar_second_item a{
@@ -2923,5 +2924,95 @@ transform: scale(1.1);
   flex-basis: 70%;
 }
 
+.footer_address{
+   width: 100%;
+   background-color: #283886;
+   border-top: 1px solid white;
+   display: flex ;
+   justify-content: space-evenly;
+   padding: 20px;
+}
+
+.footer_address div{
+
+    flex-basis:  20%;
+    
+}
+
+.footer_address_element{
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    color: white;
+    
+}
+
+.footer_address_image{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center
+}
+
+.footer_address_element_input{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: rgba(0,0,0,0.4);
+  border: 1px rgba(255,255,255,0.15) solid;
+  font-size: 14px;
+  color: #fff;
+}
+
+.footer_address_element_button{
+  width: auto;
+    height: auto;
+    padding: 4px 20px 5px 20px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 30px;
+    background-color: #e03419 !important;
+}
+
+.hide_extra_footer_image{
+  display: block;
+}
+
+.extra_footer_image{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .footer_address{
+     flex-direction: column;
+     padding: 0; 
+  }
+
+  .footer_address_element{
+    border-bottom: 1px solid white;
+    align-items: center;
+    padding: 2px;
+  }
+
+  .footer_address_image{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .extra_footer_image{
+    display: block;
+  }
+
+  .hide_extra_footer_image{
+    display: none;
+  }
+
+  .move_quick_link{
+    margin-right: 40px;
+  }
+}
 
     
