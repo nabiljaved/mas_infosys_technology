@@ -248,7 +248,10 @@ h6,
   position: fixed;
   background: white;
   height: 9.875rem;
-  border-bottom: 3px solid whitesmoke
+  border-bottom: 3px solid whitesmoke;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 #header .logo h1 {
