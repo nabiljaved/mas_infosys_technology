@@ -198,7 +198,7 @@ h6,
 
 .header_navbar ul li a:hover
 {
-  background-color: red !important;
+  background-color: #b32318 !important ;
   font-weight: bolder;
   color: white;
 }
@@ -455,13 +455,13 @@ h6,
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 14px;
-  color: #b32318;
+  color: #131313;;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #b32318;
+  color: #131313;;
 }
 
 .navbar-mobile .getstarted,
