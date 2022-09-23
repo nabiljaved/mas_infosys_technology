@@ -3,6 +3,8 @@ const Promotion = require("../models/Promotion");
 const Contact = require("../models/Contact");
 const Package = require("../models/Package");
 const jwt = require('jsonwebtoken');
+var nodemailer = require('nodemailer');
+
 
 // handle errors
 const handleErrors = (err) => {
@@ -103,12 +105,38 @@ module.exports.getPromotion = async(req, res) => {
 module.exports.addContacts = async(req, res) => {
   
   const contacts = new Contact({...req.body})
-  try {
-      await contacts.save()
-      res.status(201).json({contacts: contacts, message:"contact is addedd successfully"}) // created = 201
-  } catch (e) {
-      res.status(400).json({errors: e}) // bad error = 400
-  }
+
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'nabeeljaved2016@gmail.com',
+      pass: 'Shumaila_2146_Nabeel'
+    }
+  });
+
+  var mailOptions = {
+    from: contacts.email,
+    to: 'nabeel@masinfosys.com',
+    subject: 'Email From a Contact',
+    text: contacts.message
+  };
+
+  console.log(contacts)
+
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+
+  // try {
+  //     await contacts.save()
+  //     res.status(201).json({contacts: contacts, message:"contact is addedd successfully"}) // created = 201
+  // } catch (e) {
+  //     res.status(400).json({errors: e}) // bad error = 400
+  // }
 
 }
 

@@ -36,24 +36,26 @@
 				
 			  </div>
 			  <div class="screen-body-item">
-				<div class="app-form">
-				  <div class="app-form-group">
-					<input class="app-form-control" value="Pushpa Raj">
-				  </div>
-				  <div class="app-form-group">
-					<input class="app-form-control"  value="email">
-				  </div>
-				  <div class="app-form-group">
-					<input class="app-form-control" value="contact no">
-				  </div>
-				  <div class="app-form-group message">
-					<input class="app-form-control" value="message">
-				  </div>
-				  <div class="app-form-group buttons">
-					<button class="app-form-button general_paragraph" >CANCEL</button>
-					<button class="app-form-button general_paragraph">SEND</button>
-				  </div>
-				</div>
+				<form id="form">
+					<div class="app-form" id="form">
+						<div class="app-form-group">
+						  <input class="app-form-control" placeholder="name" type="text" name="name">
+						</div>
+						<div class="app-form-group">
+						  <input class="app-form-control"  placeholder="email" type="email" name="email">
+						</div>
+						<div class="app-form-group">
+						  <input class="app-form-control"  placeholder="phone" type="text" name="phone">
+						</div>
+						<div class="app-form-group message">
+						  <input class="app-form-control"   placeholder="contact" type="text" name="message">
+						</div>
+						<div class="app-form-group buttons">
+						  <button class="app-form-button general_paragraph" >CANCEL</button>
+						  <button class="app-form-button general_paragraph">SEND</button>
+						</div>
+					  </div>
+				</form>
 			  </div>
 			</div>
 		  </div>
@@ -73,6 +75,43 @@
 		  </div>
 		</div>
 	  </div>
+
+	  <script>
+		const c_form = document.getElementById('form');
+		
+		c_form.addEventListener('submit', async (e) => {
+		  e.preventDefault();
+			console.log('working')
+		  const name = c_form.name.value;
+		  const email = c_form.email.value;
+		  const phone = c_form.phone.value
+		  const message = c_form.message.value;
+	  
+		  try {
+			const res = await fetch('/professional-contacts', { 
+			  method: 'POST', 
+			  body: JSON.stringify({ name, email,phone,message }),
+			  headers: {'Content-Type': 'application/json'}
+			});
+			const data = await res.json();
+			console.log(data);
+			if (data.errors) {
+			  emailError.textContent = data.errors.email;
+			  passwordError.textContent = data.errors.password;
+			}
+			if (data.user) {
+			  location.assign('/admin-dashboard');
+			}
+	  
+		  }
+		  catch (err) {
+			console.log(err);
+		  }
+
+			console.log(name, email, phone, message)
+
+		});
+	  </script>
 	  
 </body>
 </html>
