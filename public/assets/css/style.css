@@ -2927,21 +2927,23 @@ transform: scale(1.1);
    background-color: #283886;
    border-top: 1px solid white;
    display: flex ;
-   justify-content: space-evenly;
    padding: 20px;
-}
-
-.footer_address div{
-
-    flex-basis:  20%;
-    
+   font-size: 12px;
+   flex-wrap: wrap;
 }
 
 .footer_address_element_large_screen{
     display: flex;
     flex-direction: column;
-    padding: 2px;
     color: white;
+}
+
+.footer_address_element_quick_links{
+  flex: 1;
+}
+
+.second_item{
+    margin-left: 20px;
 }
 
 
@@ -2987,10 +2989,54 @@ transform: scale(1.1);
   display: none;
 }
 
+.footer_address_element_quick_links {
+  width: 100%;
+  background-color: #283886;
+  border-top: 1px solid white;
+  display: flex;
+  padding: 20px;
+  font-size: 12px;
+  flex-direction: column;
+}
+
+.footer_address_element_quick_links input
+{
+  width: 40%;
+
+}
+
+.footer_address_element_quick_links button{
+  width: 20%;
+}
+
+
+@media (max-width:960px){
+  .second_item{
+    margin: 0;
+  }
+
+  .footer_address_element_large_screen{
+    border-bottom: 1px solid white;
+    width: 100%;
+    padding: 10px;
+}
+
+.footer_address{
+  padding: 0;
+}
+
+}
+
 @media (max-width: 768px) {
   .footer_address{
      flex-direction: column;
      padding: 0; 
+  }
+
+  
+
+  .footer_address_element_quick_links{
+    display: none;
   }
 
   .footer_address_element_large_screen{
