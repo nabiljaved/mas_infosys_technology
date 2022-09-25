@@ -231,5 +231,16 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+  const mediaQuery = window.matchMedia('(max-width: 768px)')
+  const mediaQuery2 = window.matchMedia('(min-width: 768px)')
+  const whtsup = document.querySelector('.whatsup a')  
+  console.log(mediaQuery)
+  if (mediaQuery.matches) {
+    whtsup.href="https://api.whatsapp.com/send?phone=+971569987270"
+  }
+
+  if (mediaQuery2.matches) {
+    whtsup.href="https://web.whatsapp.com/send?phone=+971569987270"
+  }
 
 })()
