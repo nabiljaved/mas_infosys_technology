@@ -27,6 +27,11 @@ body {
     font-size: 15px;
 }
 
+.breadcrumbs h4,a{
+  color: white;
+  text-decoration: none;
+}
+
 
 a:hover {
   text-decoration: none;
@@ -308,7 +313,7 @@ h6,
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  font-size: 14px;
+  font-size: 16px;
   color: #b32318;
   white-space: nowrap;
   transition: all 0.3s ease-in-out !important;
@@ -316,6 +321,7 @@ h6,
   font-family: Rubik;
   font-weight: 600;
   margin-top: 0.4rem;
+  text-transform: uppercase;
 }
 
 .navbar a i,
@@ -826,7 +832,7 @@ h6,
 .breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #6c757d;
+  color: #fff;
   content: "/";
 }
 

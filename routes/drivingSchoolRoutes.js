@@ -49,8 +49,8 @@ router.get('/server-virtualization', (req, res) => res.render('servervirtualizat
 router.get('/professional-installation', (req, res) => res.render('proinstall'));
 router.get('/professional-support', (req, res) => res.render('prosupport'));
 router.get('/professional-consulting', (req, res) => res.render('proconsult'));
-router.get('/professional-partners', (req, res) => res.render('propartner'));
 router.post('/professional-contacts', authController.addContacts);
+router.get('/professional-partner', (req, res) => res.render('ourpartners'));
 
 
 router.get('/package', (req, res) => res.render('package'));
