@@ -6,7 +6,7 @@ function cookiesPolicyPrompt(){
     document.getElementById("btnAcceptCookiePolicy").addEventListener('click', function(){
       console.log("working")
       Cookies.set('masinfosys', 'yes', { expires: 30 });
-      document.getElementById("alertCookiePolicy").style.display = 'block'
+      document.getElementById("alertCookiePolicy").style.display = 'none'
     })
     document.getElementById("btnDeclineCookiePolicy").click('click', function(){
         
