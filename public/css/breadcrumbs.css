@@ -1,66 +1,121 @@
 .breadcrumbs_one{
-    background: linear-gradient(to top, rgba(90, 68, 18, 0.3) 2%, transparent),
-    url("https://www.engagementmultiplier.com/wp-content/uploads/2021/07/hybrid-meeting-scaled-e1628020321506.jpg") center/cover no-repeat border-box, black;
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.5) 10%, transparent),url("https://www.engagementmultiplier.com/wp-content/uploads/2021/07/hybrid-meeting-scaled-e1628020321506.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     color: white;
   }
 
   .breadcrumbs_twoo{
-    background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 2%, transparent),
-    url("https://contentstatic.timesjobs.com/photo/74902695/slideshows/5-tips-to-prepare-for-group-discussion-rounds.jpg") center/cover no-repeat border-box, black;
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.5) 10%, transparent),url("https://contentstatic.timesjobs.com/photo/74902695/slideshows/5-tips-to-prepare-for-group-discussion-rounds.jpg") center/cover no-repeat border-box, black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     color: white;
+    background-position: 50%
   }
   
   .breadcrumbs_two{
-    background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 2%, transparent),
-    url("https://visicase.com/wp-content/uploads/2021/05/Visicase-people.jpg") center/cover no-repeat border-box, black;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 10%, transparent),url("https://eml.usc.edu/hubfs/executive-leadership-development-diversity-in-the-workplace.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     color: white;
+    background-position: center top 10%;
   }
 
   .breadcrumbs_three{
-    background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 15%, transparent),
-    url("https://visicase.com/wp-content/uploads/2021/02/Aged-care-industry-training.jpg") center/cover no-repeat border-box, black;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 10%, transparent),url("https://www.westend61.de/images/0001515123pw/team-having-discussion-while-sitting-in-meeting-at-office-JSRF01332.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 25%;
+    width: 100%;
     color: white;
+   
+    
   }
 
   .breadcrumbs_four{
     background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 15%, transparent),
     url("https://www.deccanherald.com/sites/dh/files/articleimages/2021/01/05/group-discussion-istock-603992138-935358-1609832067.jpg") center/cover no-repeat border-box, black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 6%;
+    width: 100%;
     color: white;
   } 
 
   .breadcrumbs_five{
     background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 15%, transparent),
     url("https://images.ctfassets.net/pdf29us7flmy/3YIRjCRhGuRfSxzwjBws5V/62fa7fe9d4f8030b7b9b8d5ee59641b6/shutterstock_401240461_optimized__1_.jpg") center/cover no-repeat border-box, black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 26%;
+    width: 100%;
     color: white;
   }    
   
   .breadcrumbs_six{
     background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 15%, transparent),
     url("https://www.growthtactics.net/wp-content/uploads/2020/10/13-Tips-to-Easily-Lead-a-Successful-Group-Discussion.png") center/cover no-repeat border-box, black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     color: white;
+    background-position: center top 3%;
   }  
 
 
   .breadcrumbs_seven{
     background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 15%, transparent),
-    url("https://buildings.honeywell.com/content/dam/hbtbt/en/images/horizontal/industries-data-centers-2880x1440.jpg") center/cover no-repeat border-box, black;
+    url("https://xm207gpxftdymtk30ykxm16w-wpengine.netdna-ssl.com/wp-content/uploads/2022/02/what-is-a-hypervisor-used-for.png") center/cover no-repeat border-box, black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     color: white;
   } 
 
   .breadcrumbs_eight{
     background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 15%, transparent),
     url("https://i.ytimg.com/vi/kca9NuLAuFI/maxresdefault.jpg") center/cover no-repeat border-box, black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     color: white;
   } 
 
   .breadcrumbs_nine{
     background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 15%, transparent),
     url("https://cc-dev.ccdevprojects.com/blog/wp-content/uploads/2016/11/businesssetup.com-banner.jpg") center/cover no-repeat border-box, black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     color: white;
   }    
 
   .breadcrumbs_ten{
     background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 15%, transparent),
-    url("https://d27aquackk44od.cloudfront.net/wp-content/uploads/2022/05/31134739/Industrial-Robots-5G-1024x576.png") center/cover no-repeat border-box, black;
+    url("https://www.ribcon.com/image/mobile-banner.jpg") center/cover no-repeat border-box, black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     color: white;
+    background-position: center top 30%;
   } 
+
+  .breadcrumbs_eleven{
+    background: linear-gradient(to top, rgba(48, 36, 8, 0.3) 15%, transparent),
+    url("https://www.asme.org/getmedia/5692df68-45da-4c4c-9b07-21195ea97e22/11-ways-to-increase-workplace-diversity_03.jpg?width=520&height=345&ext=.jpg") center/cover no-repeat border-box, black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: white;
+    background-position: center top 30%;
+  }
+
+
+  @media (max-width:768px) {
+    .breadcrumbs ol{
+      margin-top: 10px;
+    }
+  }

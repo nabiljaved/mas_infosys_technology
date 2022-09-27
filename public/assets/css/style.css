@@ -808,13 +808,19 @@ h6,
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background-color: #f3f8fa;
-  min-height: 40px;
+  margin-top: -80px;
+  margin-bottom: 20px;
+  height: 276px;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
-.breadcrumbs h2 {
-  font-size: 28px;
-  font-weight: 300;
+.breadcrumbs h2,h4,h6 {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
 }
 
 .breadcrumbs ol {
