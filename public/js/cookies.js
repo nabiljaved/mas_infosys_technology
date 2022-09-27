@@ -6,9 +6,10 @@ function cookiesPolicyPrompt(){
     document.getElementById("btnAcceptCookiePolicy").addEventListener('click', function(){
       console.log("working")
       Cookies.set('masinfosys', 'yes', { expires: 30 });
+      document.getElementById("alertCookiePolicy").style.display = 'block'
     })
     document.getElementById("btnDeclineCookiePolicy").click('click', function(){
-        document.location.href = "https://www.bing.com/search?q=rick+rolled";
+        
     })
   }
  
