@@ -10,6 +10,7 @@ function cookiesPolicyPrompt(){
     })
     document.getElementById("btnDeclineCookiePolicy").click('click', function(){
       document.getElementById("alertCookiePolicy").style.display = 'none'
+      console.log("working")
     })
   }
  
