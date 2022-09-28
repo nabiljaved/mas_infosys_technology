@@ -9,7 +9,7 @@ function cookiesPolicyPrompt(){
       document.getElementById("alertCookiePolicy").style.display = 'none'
     })
     document.getElementById("btnDeclineCookiePolicy").click('click', function(){
-        
+      document.getElementById("alertCookiePolicy").style.display = 'none'
     })
   }
  
