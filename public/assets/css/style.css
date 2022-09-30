@@ -89,7 +89,6 @@ h6,
   width: 100%;
   height: 500px;
   flex-direction:column;
-  background: url('https://i.dell.com/is/image/DellContent/content/dam/uwaem/production-design-assets/en/apex/images/overview/apex-overview-promo-rectangular-blue.jpg?wid=1280&fit=constrain') no-repeat center center/cover;
   display: flex;
   justify-content: center;
 }
