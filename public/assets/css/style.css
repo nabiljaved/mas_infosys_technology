@@ -93,6 +93,12 @@ h6,
   justify-content: center;
 }
 
+.showcase1 {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
 .content
 {
   height:100%; 
@@ -2863,7 +2869,7 @@ transform: scale(1.1);
 }
 
 .jumbotron-image {
-  background-position: center center;
+  background-position:center top 40%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2901,6 +2907,7 @@ transform: scale(1.1);
   width:400px; 
   text-align: center;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .site_navbar_second_item a{

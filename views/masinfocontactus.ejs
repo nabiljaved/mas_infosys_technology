@@ -1,117 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/contact.css" rel="stylesheet"/>
-	<title>MasInfosys</title>
-</head>
-<body>
-	<div class="back_div"></div>
-	<div class="background">
-		<div class="container">
-		  <div class="screen">
-			<div class="screen-header">
-			  <div class="screen-header-left">
-				<div class="screen-header-button close"></div>
-				<div class="screen-header-button maximize"></div>
-				<div class="screen-header-button minimize"></div>
+	<%- include('partials/masinfosysheader'); -%>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <div class="container mt-5">
+
+
+        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=dublin&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <a
+                href="https://www.maps.ie/route-planner.htm">Journey Planner</a>
+        </div>
+
+        <p class="text-center pt-4 pb-4 h3">We are based in KSA, UAE AND INDIA </p>
+
+		<form style="margin-bottom: 50px;">
+			<div class="form-row">
+			  <div class="form-group col-md-6">
+				<label for="inputEmail4">Email</label>
+				<input type="email" class="form-control" id="inputEmail4" placeholder="Email">
 			  </div>
-			  <div class="screen-header-right">
-				<div class="screen-header-ellipsis"></div>
-				<div class="screen-header-ellipsis"></div>
-				<div class="screen-header-ellipsis"></div>
+			  <div class="form-group col-md-6">
+				<label for="inputPassword4">Name</label>
+				<input type="text" class="form-control" id="inputPassword4" placeholder="name">
 			  </div>
 			</div>
-			<div class="screen-body">
-			  <div class="screen-body-item left">
-				<div class="app-title">
-				  <span class="general_paragraph">CONTACT US</span>
-				  <span style="visibility: hidden;">US</span>
-				</div>
-
-				<a href="/" class="go_back_button general_paragraph">GO BACK</a>
-				<div class="app-contact general_paragraph">CONTACT INFO : +971 52 170 9987</div>
-				
+			<div class="form-group">
+			  <label for="inputAddress">Address</label>
+			  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+			</div>
+			<div class="form-group">
+			  <label for="inputAddress2">Address 2</label>
+			  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+			</div>
+			<div class="form-row">
+			  <div class="form-group col-md-6">
+				<label for="inputCity">City</label>
+				<input type="text" class="form-control" id="inputCity">
 			  </div>
-			  <div class="screen-body-item">
-				<form id="form">
-					<div class="app-form" id="form">
-						<div class="app-form-group">
-						  <input class="app-form-control" placeholder="name" type="text" name="name">
-						</div>
-						<div class="app-form-group">
-						  <input class="app-form-control"  placeholder="email" type="email" name="email">
-						</div>
-						<div class="app-form-group">
-						  <input class="app-form-control"  placeholder="phone" type="text" name="phone">
-						</div>
-						<div class="app-form-group message">
-						  <input class="app-form-control"   placeholder="contact" type="text" name="message">
-						</div>
-						<div class="app-form-group buttons">
-						  <button class="app-form-button general_paragraph" >CANCEL</button>
-						  <button class="app-form-button general_paragraph">SEND</button>
-						</div>
-					  </div>
-				</form>
+			  <div class="form-group col-md-4">
+				<label for="inputState">State</label>
+				<select id="inputState" class="form-control">
+				  <option selected>Choose...</option>
+				  <option>...</option>
+				</select>
+			  </div>
+			  <div class="form-group col-md-2">
+				<label for="inputZip">Zip</label>
+				<input type="text" class="form-control" id="inputZip">
 			  </div>
 			</div>
-		  </div>
-		  <div class="credits">
-			<p class="general_paragraph">MAS Infosys ® All Right Reserved</p>
-			<a class="credits-link" href="https://dribbble.com/shots/2666271-Contact" target="_blank">
-			  <svg class="dribbble" viewBox="0 0 200 200">
-				<g stroke="#ffffff" fill="none">
-				  <circle cx="100" cy="100" r="90" stroke-width="20"></circle>
-				  <path d="M62.737004,13.7923523 C105.08055,51.0454853 135.018754,126.906957 141.768278,182.963345" stroke-width="20"></path>
-				  <path d="M10.3787186,87.7261455 C41.7092324,90.9577894 125.850356,86.5317271 163.474536,38.7920951" stroke-width="20"></path>
-				  <path d="M41.3611549,163.928627 C62.9207607,117.659048 137.020642,86.7137169 189.041451,107.858103" stroke-width="20"></path>
-				</g>
-			  </svg>
-			  <p class="general_paragraph">2022</p>
-			</a>
-		  </div>
-		</div>
-	  </div>
+			<div class="form-group">
+			  <div class="form-check">
+				<input class="form-check-input" type="checkbox" id="gridCheck">
+				<label class="form-check-label" for="gridCheck">
+				  Check me out
+				</label>
+			  </div>
+			</div>
+			<button type="submit" class="btn btn-primary">Sign in</button>
+		  </form>
 
-	  <script>
-		const c_form = document.getElementById('form');
 		
-		c_form.addEventListener('submit', async (e) => {
-		  e.preventDefault();
-			console.log('working')
-		  const name = c_form.name.value;
-		  const email = c_form.email.value;
-		  const phone = c_form.phone.value
-		  const message = c_form.message.value;
-	  
-		  try {
-			const res = await fetch('/professional-contacts', { 
-			  method: 'POST', 
-			  body: JSON.stringify({ name, email,phone,message }),
-			  headers: {'Content-Type': 'application/json'}
-			});
-			const data = await res.json();
-			console.log(data);
-			if (data.errors) {
-			  emailError.textContent = data.errors.email;
-			  passwordError.textContent = data.errors.password;
-			}
-			if (data.user) {
-			  location.assign('/admin-dashboard');
-			}
-	  
-		  }
-		  catch (err) {
-			console.log(err);
-		  }
+</div>
 
-			console.log(name, email, phone, message)
 
-		});
-	  </script>
-	  
-</body>
-</html>
+
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<%- include('partials/masinfosysfooter'); -%>
