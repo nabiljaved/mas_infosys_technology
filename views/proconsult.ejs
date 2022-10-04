@@ -1,10 +1,370 @@
 <%- include('partials/masinfosysheader'); -%>
 
+<style>
+ .consultancy_top{
+    height: 300px;
+    width: 100%;
+    background: url("https://www.dataprise.com/Portals/0/Images/IT_Consulting_Page/IT_Consulting_Landing_Hero_BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+ }
+
+ .consultancy_top h4{
+    color: white;
+    z-index: 20;
+ }
+
+ .backdrop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.5);
+ }
+
+ .consultancy_top a{
+    padding: 18px 50px;
+    text-decoration: none;
+    background-color: #bc2014;
+    cursor: pointer;
+    border: 1px solid white;
+    z-index: 20;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .consultancy_top a:hover{
+    
+    text-decoration: none;
+    color: white;
+ }
+
+ .service_section{
+    width: 100%;
+    background-color: #fbfbfb;
+    margin-bottom: 50px;
+   
+ }
+
+ .service_section_container{
+    width: 90%;
+    margin: 0 auto;
+    height: 95%;
+    
+   
+ }
+
+ .service_section_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+ .inner_container{
+    height: 100%;
+    flex-basis: 28%;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+   
+ }
+
+ .inner_container h2{
+       margin-top: 30px; 
+ }
+
+ .inner_container p{
+       text-align: center;
+ }
+
+ .inner_container a{
+      padding: 18px 50px;
+      background-color: #273272;
+      cursor: pointer;
+      text-decoration: none;
+      color: white !important;
+      border: 1px solid white;
+ }
+
+ .banner{
+    background-color: #8dc63f; 
+    height:100px; 
+    width:100%
+ }
+
+ .banner div{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+ }
+
+ .banner div h3{
+    font-size: 20px;
+    color: white;
+ }
+
+ .btn:not(.btn-link){
+    background-color: rgb(244, 247, 248);
+    color: rgb(141, 198, 63);
+    border-color: rgb(141, 198, 63);
+    font-size: 16.43px;
+    padding: 18px 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .btn:hover:not(.btn-link){
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+ }
+
+  @media(max-width:996px){
+    .service_section_container{
+        flex-direction: column;
+    }
+
+    .banner div{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+ } 
+
+
+</style>
+
+
 
 <link href="/css/breadcrumbs.css" rel="stylesheet"/>
 
+
+<div class="consultancy_top">
+    <div class="backdrop"></div>
+    <h4 class="heading_style">IT CONSULTING SERVICES</h4>
+    <h4 class="heading_style">Leading IT Consultancy Firm</h4>
+    <a href="/contact-us">CONTACT</a>
+</div>
+
+<div class="container-fluid" style="margin-top: 20px;">
+    <h1 class="heading_style">
+        IT Infrastructure
+    </h1>
+
+    <p class="general_paragraph" style="font-weight: 200;justify-content: left;" >
+        Our highly skilled experts will help you determine the current state of IT in your company, assist in development of an IT strategy that will open new horizons for business, and successful strategy realization IT infrastructure consulting services includes:- 
+        technical audit of IT infrastructure according to general recommendations, including inventory and compliance with industry standards 
+        audit of the IT infrastructure management processes (according to ITIL) 
+        high-level architecture development of company’s IT infrastructure 
+        solution design to optimize IT infrastructure 
+        optimization of IT infrastructure management processes (according to ITIL)
+    </p>
+
+    <h1 class="heading_style" >
+        Features, IT Consulting Services Free Up Valuable Time for Your Business
+    </h1>
+
+    <p class="general_paragraph" style="font-weight: 200;justify-content: left;" >
+        Profitable-Reduce the Cost & Time When you implement New IT Solutions 
+        Minimum Risk Reduce Risks while Implementing/Optimizing infrastructure through rational choice of 
+        Solution that take into accounts the vertical industrial specifics. 
+        Fast Decision Making: Accelerate decision making process when optimising IT Infrastructure.
+        Audit in Shortest time: Produce quick audit results due to year of experience and use of advanced Analysis technique
+    </p>
+
+    <div class="container-fluid" >
+        <hr class="span_seperator"></hr>
+    </div> 
+
+</div>
+
+
+
+
+<!---service section-->
+
+<section class="service_section">
+    <h2 style="text-align: center">
+        IT Consulting Services We Offer Include:
+    </h2>
+
+
+    <div class="service_section_container">
+        <div class="inner_container">
+            <img src="/img/itconsult/one.jpg" style="height: 150px; width: 150px; border-radius:50%"/>
+            <h2 class="heading_style">Security Assessment</h2>
+            <p class="general_heading">
+                Our information technology assessments help you gain a better understanding of your IT environment to support your key business goals and objectives.
+            </p>
+            <a href="/contact-us">Learn More</a>
+        </div>
+        <div class="inner_container">
+            <img src="/img/itconsult/two.jpg" style="height: 150px; width: 150px; border-radius:50%"/>
+            <h2 class="heading_style">IT Strategy & Planning</h2>
+            <p class="general_heading">
+                Our dedicated team of technical experts work with you to develop an IT strategy to ensure your technology decisions meet your business needs Trends and Objectives
+            </p>
+            <a href="/contact-us">Learn More</a>
+        </div>
+        <div class="inner_container">
+            <img src="/img/itconsult/three.jpg" style="height: 150px; width: 150px; border-radius:50%"/>
+            <h2 class="heading_style">Business Continuity</h2>
+            <p class="general_heading">
+                We help you devise a business continuity plan to keep your critical systems and processes safe while providing you with peace of mind, good communication and consultancy
+            </p>
+            <a href="/contact-us">Learn More</a>
+        </div>
+        <div class="inner_container">
+            <img src="/img/itconsult/four.jpg" style="height: 150px; width: 150px; border-radius:50%"/>
+            <h2 class="heading_style">Risk & Compliance</h2>
+            <p class="general_heading">
+                We work with you to assess, plan, implement, and manage IT frameworks for a successful alignment of infrastructure and organizational Strategy
+            </p>
+            <a href="/contact-us">Learn More</a>
+        </div>
+    </div>
+
+</section>
+
+
+<div class="container-fluid" style="margin-bottom:30px">
+    <hr class="span_seperator"></hr>
+</div> 
+
+<div class="container-fluid" style="padding: 20px;">
+    <h2 class="heading_style" >
+        Leverage Our Custom-Tailored IT Consultancy Services
+    </h2>
+
+    <p class="general_paragraph" style="font-weight: 400;">
+        Our security assessment service provides you with a thorough evaluation of your IT infrastructure to identify its compliance to business requirements and known best practices. The Assessment will give you the best way to organize interaction of various security systems: antivirus solutions, network firewalls, intrusion detection and prevention systems etc. <br><br>
+
+        The service can help you reduce the risks of possible security breaches and take all necessary measures to prevent them or minimize the harm they can cause. The Assessment will outline the most critical security gaps including identified assets, threats, vulnerabilities, impact and likelihood assessment, and the risk results analysis.The security assessment service includes evaluation of the current state of security systems and developing the best security improvement strategy. There are several implementation phases. <br><br>
+
+        Phase-1 <br>
+
+        Analysis of current infrastructure risks and their impact on business, comparing security requirements with business needs and limitations <br> <br>
+
+        Phase-2 <br>
+        Security Policy analysis for compliance with world standard <br><br>
+
+        Phase-3 <br>
+        Providing the list of recommendations for security improvement based on known best practices according to business requirements and client needs.
+
+    </p>
+</div>
+
+<div class="banner">
+    <div>
+        <h3>Want to learn more about how our IT consulting services can help you meet your business goals?</h3>
+        <a href="/contact-us" class="btn">LEARN MORE</a>
+    </div>
+</div>
+
+
+<section class="py-5">
+    <div class="container-fluid">
+      <div class="row">
+       
+        <div class="col-md-6" style="padding: 50px;">
+          <h4 class="heading_style"><span style="">IT Consulting From Our Expert Professional Services Organization</h4>
+              <p class="general_paragraph">
+                All IT consulting services are delivered by the experts on our Professional Services team. Learn more about how our methodology and benefits of working with the Dataprise Professional Services Organization.
+            </p>
+          
+  
+            <a href="/contact-us" class="btn">LEARN MORE</a>
+        </div>
+
+        <div class="col-md-6" style="display: flex;justify-content:center; align-items:center">
+            <img src="/img/support-staff2.jpg" alt="" class="img-fluid mb-3" style="height: 281px; width: 550px;">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <h3 class="heading_style" style="text-align: center;">Frequently Asked Questions</h3>
+  <p class="general_paragraph" style="text-align: center;">If you’re looking for more information on our IT consulting services, explore our frequently asked questions.</p>
+
+
+
+<div class="container-fluid" style="margin-bottom: 20px;">
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="border:none; color:#000;text-decoration: none">
+                What IT Strategic Consulting services does Dataprise offer?
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <p class="general_heading">Dataprise offers assessment, analysis, and planning services at the strategic layer of an organization. Our strategic IT services can help your IT program support your business objectives. Dataprise's IT experts and virtual CIOs (vCIO) deliver these services to help augment a skill or experience gap within our client’s organizations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="border:none; color:#000;text-decoration: none">
+                What is Dataprise's approach to Strategic Consulting services?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <p class="general_heading">Dataprise utilizes industry standard frameworks (e.g., ITIL, PMBOK, COBIT, TOGAF) and best practices to deliver these service that are appropriate for the need and scalable based on client requirements.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="border:none; color:#000; text-decoration: none;">
+                What can I expect from a Strategic Consulting engagement?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <p class="general_heading">Unlike some other IT consulting companies, Dataprise IT experts and vCIOs work with your business to identify key issues and future endeavors, which are then assessed and analyzed to help you achieve your business goals. We present strategy and planning (e.g., a strategic technology roadmap), which examines technologies, both current legacy and newer options, and assesses the best options for your organization. We then implement the roadmap based on business priority that clearly defines where investments should be made as well as the best path forward.</p>
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+
+ 
+
+
+  
+
+
  <!-- ======= About Us Section ======= -->
- <section class="breadcrumbs breadcrumbs_ten bg-transparent" style="margin-top: 5px;margin-bottom:30px;" >
+ <!-- <section class="breadcrumbs breadcrumbs_ten bg-transparent" style="margin-top: 5px;margin-bottom:30px;" >
   <div class="container">
 
     <div class="d-flex justify-content-between align-items-center">
@@ -19,9 +379,9 @@
     </div>
 
   </div>
-</section><!-- End About Us Section -->
+</section>End About Us Section -->
 
-<div class="container-fluid" style="margin-top: 30px;">
+<!-- <div class="container-fluid" style="margin-top: 30px;">
     <h4 class="heading_style">Professional Consulting Services</h3>
 </div>
 
@@ -71,7 +431,7 @@
 
     </p>
 </div>
-
+ -->
 
 
 

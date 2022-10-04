@@ -1,0 +1,139 @@
+
+    h3{
+        margin-top: 10px;
+       
+      }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+    padding: 25px;
+  }
+  
+  
+  
+  .gallery__item--1,
+  .gallery__item--2,
+  .gallery__item--3,
+  .gallery__item--4,
+  .gallery__item--5,
+  .gallery__item--6
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-item h4{
+    position: absolute;
+    top: 10;
+    color: #ffffff;
+  }
+  
+  .gallery_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all .7s ease-in-out;
+  }
+  
+  .gallery_img:hover {
+    transform: scale(0.99)
+  }
+  
+  
+  
+  .gallery__item--1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+  }
+  
+  .gallery__item--2 {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 3;
+  }
+   
+  .gallery__item--3 {
+      grid-column-start: 5;
+      grid-column-end: 9;
+      grid-row-start: 1;
+      grid-row-end: 6;
+  }
+  
+  .gallery__item--4 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 3;
+      grid-row-end: 6;
+  }
+  
+  .gallery__item--5 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 6;
+      grid-row-end: 9;
+  }
+  
+  .gallery__item--6 {
+      grid-column-start: 5;
+      grid-column-end: 9;
+      grid-row-start: 6;
+      grid-row-end: 9;
+  }
+  
+  .install_btn{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .install_btn a{
+    margin-bottom: 20px;
+     padding: 5px 10px;
+      border: 2px solid #0079c2;
+      font-size: 14px;
+      color: #000000;
+      background-color: #ffffff;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  .install_btn a:hover{
+    color: white !important;
+    background-color: #bc2014;
+    border: 1px solid gray
+    
+  }
+  
+  .how_it_works{
+    width: 60%;
+    max-width: 60%;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+  
+  .how_it_works div{
+    flex-basis: 30%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #bababa;
+    border-radius: 10px;
+  }
+  
+  .how_it_works div:hover{
+    background-color: #424497;
+    color: white;
+  }
