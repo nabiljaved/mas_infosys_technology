@@ -137,3 +137,18 @@
     background-color: #424497;
     color: white;
   }
+
+  @media (max-width:768px) {
+    .how_it_works div:not(.item-1){
+        display: none;
+        background-color: #bc2014;
+    }
+    .how_it_works div{
+      flex-basis: 100% !important;
+      
+    }
+    
+    .schedule_install_btn{
+      padding: 10px;
+    }    
+  }
