@@ -58,7 +58,7 @@ router.get('/job-opportunity', (req, res) => res.render('job-opportunity'));
 router.get('/make-payment', (req, res) => res.render('make-payment'));
 router.get('/contact-us', (req, res) => res.render('contact-us'));
 router.get('/book-package-page', (req, res) => res.render('show-book-page'));
-
+router.get('/get_emails', apiController.getEmails);
 
 
 //render post routes

@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const adminController = require('../controllers/adminControllers');
+const apiController = require('../controllers/apiControllers');
 const { requireAuth, checkUser, protectedRoutes, redirectRoutes } = require('../middleware/authMiddleware');
 var expressLayouts = require('express-ejs-layouts');
 
@@ -13,6 +14,7 @@ router.get('/show_contacts', (req, res) => res.render('show_contacts_page', { la
 router.get('/add-promotion', (req, res) => res.render('promotion-page', { layout: 'dashboard' }));
 router.get('/add-package', (req, res) => res.render('package-page', { layout: 'dashboard' }));
 router.get('/add-contact', (req, res) => res.render('contact-page', { layout: 'dashboard' }));
+router.get('/show_emails',(req, res) => res.render('show_emails_page', { layout: 'dashboard' }));
 
 //booking, contact us , hr data 
 
@@ -21,10 +23,13 @@ router.get('/show_all_jobs', (req, res) => res.render('show_all_jobs_page', { la
 router.get('/show_all_contacted_us', (req, res) => res.render('show_all_contacted_us_page', { layout: 'dashboard' }));
 
 
+
+
 //post methods contact-us
 router.post('/add-package', protectedRoutes, adminController.addPackages);
 router.post('/add-promotion', protectedRoutes, adminController.addPromotion);
 router.post('/add-contact', protectedRoutes, adminController.addContact);
+router.post('/send-contact', protectedRoutes, apiController.contactUs);
 
 
 

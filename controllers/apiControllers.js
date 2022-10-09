@@ -89,19 +89,31 @@ module.exports.jobOpportunity = async(req, res) => {
 
 module.exports.contactUs = async(req, res) => {
 
-    const { name, email, phone, subject, message } = req.body;
+    const { name, email, phone, subject, message, address } = req.body;
 
 
 
     try {
-        const contactus = new ContactUs({ name, email, phone, subject, message })
+        const contactus = new ContactUs({ name, email, phone, subject, message, address })
         await contactus.save()
             // response.redirect('/admin-dashboard');
         res.status(200).json({ contactus: contactus, message: "message is sent successfully" }) // created = 201
-        console.log(packages)
+        console.log(contactus)
     } catch (e) {
         res.status(400).json({ errors: "could not sent message", er: e }) // bad error = 400
         console.log(e.message)
+    }
+
+
+}
+
+module.exports.getEmails = async(req, res) => {
+
+    const emails = await ContactUs.find({})
+    try {
+        res.status(200).json(emails); // created = 201
+    } catch (e) {
+        res.status(400).json({ errors: "could not get emails" }) // bad error = 400
     }
 
 

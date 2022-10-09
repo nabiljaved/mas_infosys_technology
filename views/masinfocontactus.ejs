@@ -13,37 +13,33 @@
         <p class="text-center pt-4 pb-4 h3">We are based in KSA, UAE AND INDIA </p>
 
 		<div class="container-fluid" style="background-color: #eeeeee; padding: 50px; margin-bottom: 50px;">
-			<form>
+			<form id="form">
 				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="get_name">Name</label>
+						<input type="text" class="form-control" id="get_name" placeholder="name">
+					</div>
 				  <div class="form-group col-md-6">
-					<label for="inputEmail4">Email</label>
-					<input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-				  </div>
-				  <div class="form-group col-md-6">
-					<label for="inputPassword4">Name</label>
-					<input type="text" class="form-control" id="inputPassword4" placeholder="name">
+					<label for="get_email">Email</label>
+					<input type="email" class="form-control" id="get_email" placeholder="Email">
 				  </div>
 				</div>
 				<div class="form-group">
-				  <label for="inputAddress">Address</label>
-				  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+				  <label for="get_address">Address</label>
+				  <input type="text" class="form-control" id="get_address" placeholder="1234 Main St">
 				</div>
 				<div class="form-group">
-				  <label for="inputAddress2">Address 2</label>
-				  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+				  <label for="get_phone">Phone Number</label>
+				  <input type="text" class="form-control" id="get_phone" placeholder="contact number">
 				</div>
 				<div class="form-row">
 				  <div class="form-group col-md-6">
-					<label for="inputCity">City</label>
-					<input type="text" class="form-control" id="inputCity">
+					<label for="get_subject">Subject</label>
+					<input type="text" class="form-control" id="get_subject">
 				  </div>
-				  <div class="form-group col-md-4">
-					<label for="inputState">State</label>
-					<input type="text" class="form-control" id="inputState">
-				  </div>
-				  <div class="form-group col-md-2">
-					<label for="inputZip">Telephone</label>
-					<input type="number" class="form-control" id="inputZip">
+				  <div class="form-group col-md-6">
+					<label for="get_message">Message</label>
+					<textarea class="form-control" rows="5" placeholder="Message " id="get_message"></textarea>
 				  </div>
 				</div>
 				<button type="submit" class="btn btn-primary" style="margin-top: 20px;">SEND</button>
@@ -57,4 +53,96 @@
 
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script>
+
+
+			var form = document.querySelector('#form');
+			form.addEventListener('submit', addContact);
+		  
+			function addContact(e)
+			{
+			  e.preventDefault();
+		  
+		  
+			  const name = document.getElementById('get_name').value;
+			  const email = document.getElementById('get_email').value;
+			  const phone = document.getElementById('get_phone').value;
+			  const subject = document.getElementById('get_subject').value;
+			  const message = document.getElementById('get_message').value;
+			  const address = document.getElementById('get_address').value;
+		  
+			  if (name === '' || address === '' || phone === '', email === '', subject === '', message === '')
+			  {
+				alert("please fill all fields", 'danger')
+				return;
+			  }
+		  
+		  
+			  var data = {
+					name,
+					email,
+					phone,
+					subject,
+					message,
+					address
+			  }
+		  
+			  console.log(data)
+		  
+			  fetch('/admin-dashboard/send-contact', {
+				method: 'post',
+				body: JSON.stringify(data),
+				headers: {
+				  'Accept': 'application/json',
+				  'Content-Type': 'application/json',
+				  "Access-Control-Allow-Origin": "/admin-dashboard/add-contact"
+				}
+			  }).then(function (response)
+			  {
+				return response.json();
+			  }).then(function (data)
+			  {
+				if (data)
+				{
+				  alert("Successfully sent message !")  
+				  location.reload() 
+				}
+			  });
+		  
+			}
+		  
+			// class UI
+			// {
+		  
+			//   static showAlert(message, className)
+			//   {
+			// 	const div = document.createElement('div');
+			// 	div.className = `alert alert-${className}`;
+			// 	div.appendChild(document.createTextNode(message));
+			// 	const container = document.querySelector('.dashboard_main_wrapper');
+			// 	const form = document.querySelector('#form');
+			// 	container.insertBefore(div, form);
+		  
+			// 	// Vanish in 3 seconds
+			// 	setTimeout(() => document.querySelector('.alert').remove(), 3000);
+			//   }
+		  
+		  
+			//   static emptyFields()
+			//   {
+			// 	const name = document.getElementById('name').value = '';
+			// 	const address = document.getElementById('address').value = '';
+			// 	const phone = document.getElementById('phone').value = '';
+		  
+			//   }
+		  
+			// }
+		  
+		  
+		  </script>
+
+
+
+
 <%- include('partials/masinfosysfooter'); -%>

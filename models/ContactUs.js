@@ -27,6 +27,11 @@ const contactUsSchema = new mongoose.Schema({
         required : true,
         trim : true, 
     },
+    address : {
+        type: String,
+        required : true,
+        trim : true, 
+    },
 }, {
     timestamps : true
 })

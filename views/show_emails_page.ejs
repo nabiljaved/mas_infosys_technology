@@ -1,0 +1,115 @@
+<style>
+
+    .dashboard_main_wrapper{
+        
+            padding: 10px;
+        }
+        
+        </style>
+
+
+        <div class="dashboard_main_wrapper">
+
+
+            <h1 class="display-3" style="text-align: center;">All Emails</h1>
+
+        
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    All News </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th> Phone</th>
+                                <th> Subject </th>
+                                <th> Message </th>
+                                <th> Address </th>
+                                <th> Phone </th>
+                                <th>Actions</th>
+                            </thead>
+            
+                            <tfoot>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th> Phone</th>
+                                <th> Subject </th>
+                                <th> Message </th>
+                                <th> Address </th>
+                                <th> Phone </th>
+                                <th>Actions</th>
+                            </tfoot>
+            
+                            <tbody id="table-body">
+                                
+                                      
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+            </div>
+
+
+            <script>
+
+  
+                class UI{
+                
+                  static getContacts = async () => {
+              
+              
+                  let allemails = [];
+              
+                   try {
+                     
+                    const res = await fetch('/get_emails', { 
+                      method: 'GET', 
+                    });
+                    const data = await res.json();
+                    
+                    allemails = data;
+                     
+                    if (allemails) {
+
+                        console.log(allemails.name)
+
+                        const table_body = document.getElementById('table-body')
+
+                        allemails.map(allemail => {
+                          
+                            table_body.innerHTML += `
+                            <tr>
+                                <td>${allemail.name}</td>
+                                <td>${allemail.email}</td>
+                                <td>${allemail.phone}</td>
+                                <td>${allemail.subject}</td>
+                                <td>${allemail.message}</td>
+                                <td>${allemail.address}</td>
+                                <td>${allemail.phone}</td>
+                              
+                                <td> <a href="#" class="btn btn-outline-primary btn-sm"> Edit </a> | <a href="" class="btn btn-outline-danger btn-sm"> Delete </a> </td>
+                            </tr>
+                           
+                            `
+                        })
+
+                    }
+              
+              
+                   } catch (error) {
+                     
+                   }
+                  
+              }
+                
+                }
+              
+                 // Event: Display Locations
+                 document.addEventListener('DOMContentLoaded', UI.getContacts);
+                 
+                </script>
+              
