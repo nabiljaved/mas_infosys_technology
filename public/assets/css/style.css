@@ -248,6 +248,14 @@ h6,
   .img_container_resize{
       width: 100% !important;
   }
+
+  .heading_style{
+    font-size: 16px;
+  }
+
+  .general_paragraph{
+    font-size: 14px;
+  }
 } 
 
 .showcase1{
