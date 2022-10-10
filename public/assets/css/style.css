@@ -243,6 +243,21 @@ h6,
     font-size: 20px;
 }
 
+@media (max-width:768px){
+  
+  .img_container_resize{
+      width: 100% !important;
+  }
+} 
+
+
+
+/* @media (max-width:768px){
+  .general_paragraph{
+      font-size: 14px;
+  }
+} */
+
 #header.header-transparent {
   background: white;
 }
