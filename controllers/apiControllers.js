@@ -90,11 +90,10 @@ module.exports.jobOpportunity = async(req, res) => {
 
 module.exports.contactUs = async(req, res) => {
 
-    const { name, email, phone, subject, message, address } = req.body;
+    var { name, email, phone, subject, message, address } = req.body;
 
     try {
-        const contactus = new ContactUs({ name, email, phone, subject, message, address })
-
+        
         const output = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
@@ -103,7 +102,7 @@ module.exports.contactUs = async(req, res) => {
       <li>Address: ${address}</li>
       <li>Email: ${email}</li>
       <li>Phone: ${phone}</li>
-      <li>Phone: ${subject}</li>
+      <li>Subject: ${subject}</li>
     </ul>
     <h3>Message</h3>
     <p>${message}</p>
@@ -126,28 +125,27 @@ module.exports.contactUs = async(req, res) => {
         
         
           let mailOptions = {
-            from: '"Nodemailer Contact" <mailing@masinfosys.com>', // sender address
-            to: 'nabeeljaved2029@gmail.com, nabeel@masinfosys.com', // list of receivers
-            subject: 'MF', // Subject line
-            text: 'Hello world?', // plain text body
-            html: 'hello' // html body
+            from: `"Nodemailer Contact" <${email}>`, // sender address
+            to: 'mailing@masinfosys.com', // list of receivers
+            subject: `'Node Contact Request' : ${subject} ✔`, // Subject line
+            text: 'Hello world', // plain text body
+            html: output // html body
         };
       
         // send mail with defined transport object
-        transporter.sendMail(mailOptions, (error, info) => {
+        transporter.sendMail(mailOptions, async (error, info) => {
             if (error) {
                 return console.log(error);
+            }else{
+                const contactus = new ContactUs({ name, email, phone, subject, message, address })
+               await contactus.save()
+               res.status(200).json({ contactus: contactus, message: "message is sent successfully" }) // created = 201
             }
-            console.log('Message sent: %s', info.messageId);   
-            console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-      
+           
         });
         
           
-        //await contactus.save()
-            // response.redirect('/admin-dashboard');
-        //res.status(200).json({ contactus: contactus, message: "message is sent successfully" }) // created = 201
-        // console.log(contactus)
+        
     } catch (e) {
         res.status(400).json({ errors: "could not sent message", er: e }) // bad error = 400
         console.log(e.message)

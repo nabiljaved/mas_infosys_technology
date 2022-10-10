@@ -13,6 +13,12 @@
         <p class="text-center pt-4 pb-4 h3 heading_style">We are based in KSA, UAE AND INDIA </p>
 
 		<div class="container-fluid" style="background-color: #eeeeee; padding: 50px; margin-bottom: 50px;">
+
+			<div style="text-align: center;margin-bottom: 30px;" >
+				<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632/04de2e31234507.564a1d23645bf.gif" style="width: 100px;height:100px; display: none; margin: 0 auto;" class="loading_gif"/>
+				<p style="background-color: green; color: white;display: none" class="success_message"> EMAIL SENT SUCCESSFULLY !</p>
+			</div>
+
 			<form id="form">
 				<div class="form-row">
 					<div class="form-group col-md-6">
@@ -59,7 +65,10 @@
 
 			var form = document.querySelector('#form');
 			form.addEventListener('submit', addContact);
-		  
+			var loading = document.querySelector(".loading_gif");
+			var showMessage = document.querySelector(".success_message");
+		
+
 			function addContact(e)
 			{
 			  e.preventDefault();
@@ -88,8 +97,9 @@
 					address
 			  }
 		  
-			  console.log(data)
-		  
+	
+			  loading.style.display = 'block';
+
 			  fetch('/admin-dashboard/send-contact', {
 				method: 'post',
 				body: JSON.stringify(data),
@@ -100,13 +110,29 @@
 				}
 			  }).then(function (response)
 			  {
+				
 				return response.json();
 			  }).then(function (data)
 			  {
+				
 				if (data)
 				{
-				  alert("Successfully sent message !")  
-				  location.reload() 
+				  loading.style.display = 'none';
+				  showMessage.style.display = 'block';
+
+				  setTimeout(function(){
+					location.reload() 
+				  },1000);
+
+				  
+				}else{
+					showMessage.style.display = 'block';
+					showMessage.textContent = "Email Failed"
+
+					setTimeout(function(){
+					location.reload() 
+				  },1000);
+				  
 				}
 			  });
 		  
