@@ -110,10 +110,10 @@ module.exports.contactUs = async(req, res) => {
   `;
         
         let transporter = nodemailer.createTransport({
-            host: "sh001.webhostbox.net",
-            port:  465,
+            host: "mail.masinfosys.com",
+            port:  587,
             sendMail:true,
-            secure: true, // true for 465, false for other ports
+            secure: false, // true for 465, false for other ports
             auth: {
               user: 'nabeel@masinfosys.com', // generated ethereal user
               pass: 'Mira_2146', // generated ethereal password
@@ -126,7 +126,7 @@ module.exports.contactUs = async(req, res) => {
         
         
           let mailOptions = {
-            from: '"Nodemailer Contact" <nabeel@masinfosys.com>', // sender address
+            from: '"Nodemailer Contact" <ali@masinfosys.com>', // sender address
             to: 'nabeeljaved2029@gmail.com', // list of receivers
             subject: subject, // Subject line
             text: 'Hello world?', // plain text body
