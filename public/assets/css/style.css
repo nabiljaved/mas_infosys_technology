@@ -247,7 +247,14 @@ h6,
   
   .img_container_resize{
       width: 100% !important;
+      height: 164px !important;
   }
+
+   .img_container{
+      width: 100% !important;
+    
+  }
+
 
   .heading_style{
     font-size: 16px;
