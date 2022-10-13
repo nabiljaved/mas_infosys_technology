@@ -266,6 +266,61 @@ h6,
   border-bottom: 1px solid black;
 }
 
+.server_add{
+  display: flex;
+  justify-content: space-around;
+  margin:50px 0px;
+}
+
+.server_add .item_1,.item_2,.item_3{
+   flex-basis: 32%;
+   background-color: #e6e6e6; 
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.top_pic_div_1{
+  height: 200px;
+  background: url("/img/tower-server-add/proliant.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.top_pic_div_2{
+  height: 200px;
+  background: url("/img/tower-server-add/power-edge-t20.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.top_pic_div_3{
+  height: 200px;
+  background: url("/img/tower-server-add/lenovo1.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.btn_shop_now{
+  width: 90px;
+  height: 30px;
+  text-decoration: none;
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_shop_now:hover{
+    background-color: #b22217;
+    color: white;
+    cursor: pointer;
+}
+
 @media (max-width:768px){
   
   .img_container_resize{
@@ -293,6 +348,14 @@ h6,
 
   .add_container_item2{
     height: 200px;
+  }
+
+  .server_add{
+    flex-direction: column;
+  }
+
+  .server_add .item_1,.item_2,.item_3{
+    margin: 4px;
   }
 
 } 
