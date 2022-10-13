@@ -243,6 +243,29 @@ h6,
     font-size: 20px;
 }
 
+.add_container{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 500px;
+  grid-gap:10px ;
+  margin-bottom: 25px;
+}
+
+.add_container_item1 video{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+}
+
+.add_container_item2{
+    padding: 3px;
+}
+
+.add_container_item2_contents p{
+  border-bottom: 1px solid black;
+}
+
 @media (max-width:768px){
   
   .img_container_resize{
@@ -263,6 +286,15 @@ h6,
   .general_paragraph{
     font-size: 14px;
   }
+
+  .add_container{
+    grid-template-columns: 1fr; 
+  }
+
+  .add_container_item2{
+    height: 200px;
+  }
+
 } 
 
 .showcase1{
