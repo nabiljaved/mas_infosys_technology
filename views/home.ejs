@@ -40,7 +40,6 @@
     </div>
   </section>
 
-
     <!-- ======= Why Us Section ======= -->
     <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
       <div class="container">
@@ -55,13 +54,13 @@
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class=" heading_style"><a href="">Surveillance systems</a></h4>
+              <h4 class=" heading_style">Surveillance systems</h4>
               <p class="general_paragraph">Surveillance systems are an essential part of securing your home or business. These systems can range from wireless home security cameras to sophisticated alarm systems that notify law enforcement at the first sign of trouble</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="heading_style" ><a href="">wireless cameras</a></h4>
+              <h4 class="heading_style" >wireless cameras</h4>
               <p class=" general_paragraph">Whether you want to keep an eye on employees at nearby facilities or document every person approaching your home's front door, the right equipment for the job can offer the necessary protection.</p>
             </div>
 
@@ -70,6 +69,8 @@
 
       </div>
     </section><!-- End Why Us Section -->
+
+    <%- include('partials/productSlider'); -%>
 
     <!--OUR SERVICES--->
 
@@ -186,11 +187,11 @@
               </video>
             </div>
             <div class="add_container_item2">
-                <h1 style="background-color:#f8e268">HP Laptops</h1> 
-                <h1 style="background-color: #f8e67e;">Every Day PC's</h1>
+                <h1 style="background-color:#51a1f8; color: white;">HP Laptops</h1> 
+                <h1 style="background-color: #6aaef9;color: white;">Every Day PC's</h1>
                 <p class="general_paragraph">All the basics you need for everyday computing</p>
 
-                <div class="add_container_item2_contents" style="background-color: #faf1b2;width:100%">
+                <div class="add_container_item2_contents" style="width:100%">
                   <p class="general_paragraph">Excellent Value</p>
                   <p class="general_paragraph">Reliable Performance</p>
                   <p class="general_paragraph">Great For Multitasking</p>
@@ -200,11 +201,14 @@
             </div>
         </div>
 
-        <div class="row" data-aos="fade-up">
+        
+        <div class="row" data-aos="fade-up" style="margin-top: 100px;">
+          
           <div class="col-md-5 order-1 order-md-2">
             <img src="./assets/img/logo_virtual_glass.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
+           
             <h4 class="heading_style">
               VR Headset Virtual Reality VR 3D Glasses VR Set Incl 3D Virtual Reality Goggles, Controller, Adjustable VR Glasses
             </h4>
@@ -262,7 +266,7 @@
         </div>
 
         <div class="row" data-aos="fade-up" style="margin-bottom: 50px;">
-          <div class="col-md-5 order-1 order-md-2">
+          <div class="col-md-5 order-1 order-md-2" style="display: flex; justify-content:center; align-items:center">
             <img src="/img/data-center-3.jpg" class="img-fluid" alt="" style="border-radius: 20px;">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
@@ -276,6 +280,31 @@
             </p>
           </div>
         </div>
+
+         <!--add storage-hpe-->
+         
+        <div  class="server_add">
+      
+          <div class="item_1">
+              <div class="top_pic_div_1_storge_1" ></div>
+              <h1 class="heading_style" style="margin-top: 20px;">Hpe Nimble Storage</h1>
+              <p class="general_heading">Forget all that time wasted managing storage and fighting fires. It’s time to elevate your storage experience with an agile, always-on, always-fast platform that powers everything from VMs to containers to test. </p>
+              <a href="/contact-us" class="btn_shop_now" style="margin-top: 5px;">MORE</a>
+          </div>
+          <div class="item_1">
+            <div class="top_pic_div_1_storge_2" ></div>
+              <h1 class="heading_style" style="margin-top: 20px;">Dell Power Vault Storage </h1>
+              <p class="general_heading">PowerVault ME4 Series storage arrays deliver all the software you’ll need to store, manage, and protect your data, Thin Provisioning: Allocate and consume physical storage capacity as needed in disk pools
+              </p>
+              <a href="/contact-us" class="btn_shop_now">MORE </a>
+          </div>
+          <div class="item_1">
+            <div class="top_pic_div_1_storge_3" ></div>
+              <h1 class="heading_style" style="margin-top: 20px;">Lenovo Hyber Flash Storage</h1>
+              <p class="general_heading">Experience DM Series superior performance and reduce storage latency up to 50% with NVMe over FC. Protect your investment by increasing your storage speed through scale up and adding more controllers </p>
+              <a href="/contact-us" class="btn_shop_now" >MORE</a>
+          </div>
+      </div>
 
       </div>
     </section><!-- End Features Section -->

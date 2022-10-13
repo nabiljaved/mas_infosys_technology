@@ -249,6 +249,7 @@ h6,
   height: 500px;
   grid-gap:10px ;
   margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .add_container_item1 video{
@@ -299,6 +300,28 @@ h6,
 .top_pic_div_3{
   height: 200px;
   background: url("/img/tower-server-add/lenovo1.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.top_pic_div_1_storge_1{
+  height: 200px;
+  background: url("/img/ad-storage-image/nimble.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.top_pic_div_1_storge_2{
+  height: 200px;
+  background: url("/img/ad-storage-image/dellemc.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.top_pic_div_1_storge_3{
+  height: 200px;
+  background: url("/img/ad-storage-image/lenovo.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2824,6 +2847,7 @@ h6,
   border-radius: 15px;
   transition: 1s;
   cursor: pointer;
+  margin: 6px;
 }
 
 .service_card  .card:hover {
