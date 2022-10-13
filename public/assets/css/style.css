@@ -243,6 +243,16 @@ h6,
     font-size: 20px;
 }
 
+.virtual_section{
+  margin-top: 100px;
+}
+
+@media (max-width:768px) {
+  .virtual_section{
+    margin-top: -48px;
+  }
+}
+
 .add_container{
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -1280,9 +1290,9 @@ h6,
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
-.features .row+.row {
+/* .features .row+.row {
   margin-top: 100px;
-}
+} */
 
 .features h3 {
   font-weight: 400;
