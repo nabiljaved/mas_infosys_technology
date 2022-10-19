@@ -1,5 +1,5 @@
 let span = document.querySelectorAll('#arrows');
-console.log(span)
+let span2 = document.querySelectorAll('#arrows_rack');
 	let product = document.getElementsByClassName('product')
 	let product_page = Math.ceil(product.length/4);
 	let l = 0;
@@ -32,5 +32,20 @@ console.log(span)
 			}
 		}
 	}
-	span[1].onclick = ()=>{right_mover();}
-	span[0].onclick = ()=>{left_mover();}
+	span[1].onclick = ()=>{
+		console.log("clicked")
+		right_mover();
+	}
+	span[0].onclick = ()=>{
+		console.log("clicked")
+		left_mover();
+	}
+
+	span2[1].onclick = ()=>{
+		console.log("clicked")
+		right_mover();
+	}
+	span2[0].onclick = ()=>{
+		console.log("clicked")
+		left_mover();
+	}

@@ -3058,6 +3058,7 @@ transform: scale(1.1);
     justify-content: space-evenly;
     z-index: 1000; 
     height: 63px;
+    margin-top: -40px;
   }
 
 .site_navbar_first_item{

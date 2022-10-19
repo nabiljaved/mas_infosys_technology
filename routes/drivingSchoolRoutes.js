@@ -5,7 +5,7 @@ const apiController = require('../controllers/apiControllers');
 const { requireAuth, checkUser, protectedRoutes, redirectRoutes } = require('../middleware/authMiddleware');
 const expressLayouts = require("express-ejs-layouts");
 const router = Router();
-const {servers} = require("../data/products")
+const {servers, racks} = require("../data/products")
 
 
 
@@ -37,7 +37,7 @@ router.get('/driving-school-jobs-people-contacted-us', apiController.getPeopleCo
 
 //Routes Canadian Digital driving School ----- Render company-overview
 
-router.get('/', (req, res) => res.render('home', {servers}));
+router.get('/', (req, res) => res.render('home', {servers, racks}));
 router.get('/home', (req, res) => res.render('home'));
 router.get('/company-overview', (req, res) => res.render('masinfosysCompanyOverview'));
 router.get('/about', (req, res) => res.render('masinfoabout'));
