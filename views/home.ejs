@@ -69,9 +69,8 @@
 
       </div>
     </section><!-- End Why Us Section -->
-
-    <%- include('partials/productSlider'); -%>
-
+    <%- include('partials/productSlider', {tower:'true', rack:'false', blade:'false'}) %>
+    <%- include('partials/productSlider', {tower:'false', rack:'true', blade:'false'}) %>
     <!--OUR SERVICES--->
 
     <div class="container-fluid" style="background-color: #fdf3eb;margin-bottom:10px;padding: 20px;">

@@ -8,40 +8,87 @@
         </p>
     </div> -->
     <header>
-        <h1 style="text-align: right;" class="heading_style">Servers</h1>
+
+        <%if (tower == 'true') {%>
+        <h1 style="text-align: right;" class="heading_style">Tower Servers</h1>
+        <%}%>
+
+        <%if (rack == 'true') {%>
+        <h1 style="text-align: right;" class="heading_style">Rack Servers</h1>
+        <%}%>
+
+        <%if (blade == 'true') {%>
+            <h1 style="text-align: right;" class="heading_style">Blade Servers</h1>
+        <%}%>
+     
         <p>
             <span id="arrows">&#139;</span>
             <span id="arrows">&#155;</span>
         </p>
     </header>
 
-    <% if (servers) { %>
-        <section class="slider_section">
-            <% for(var i=0; i<servers.length; i++) {%>
-                <div class="product">
-                    <picture style="display: flex;justify-content:center">
-                        <img src="<%= servers[i].img %>" alt="" >
-                    </picture>
-                    <div class="detail">
-                        <p>
-                            <b><%= servers[i].model %></b><br>
-                            <small><%= servers[i].brand %></small>
-                        </p>
+    <% if (tower == 'true') { %>
+        <% if (servers) { %>
+            <section class="slider_section">
+                <% for(var i=0; i<servers.length; i++) {%>
+                    <div class="product">
+                        <picture>
+                            <img src="<%= servers[i].img %>" alt="" >
+                        </picture>
+                        <div class="detail">
+                            <p>
+                                <b><%= servers[i].model %></b><br>
+                                <small><%= servers[i].brand %></small>
+                            </p>
+                        </div>
+                        <div class="button">
+                            <p class="star">
+                                <strong>&star;</strong>
+                                <strong>&star;</strong>
+                                <strong>&star;</strong>
+                                <strong>&star;</strong>
+                                <strong>&star;</strong>
+                            </p>
+                            <a href="/contact-us" class="btn_shop_now">MORE </a>
+                        </div>
                     </div>
-                    <div class="button">
-                        <p class="star">
-                            <strong>&star;</strong>
-                            <strong>&star;</strong>
-                            <strong>&star;</strong>
-                            <strong>&star;</strong>
-                            <strong>&star;</strong>
-                        </p>
-                        <a href="/contact-us" class="btn_shop_now">MORE </a>
+                <% } %>
+            </section>
+        <% } %>
+    <%}%>
+
+    
+    <% if (rack == 'true') { %>
+        <% if (servers) { %>
+            <section class="slider_section">
+                <% for(var i=0; i<servers.length; i++) {%>
+                    <div class="product">
+                        <picture>
+                            <img src="<%= servers[i].img %>" alt="" >
+                        </picture>
+                        <div class="detail">
+                            <p>
+                                <b><%= servers[i].model %></b><br>
+                                <small><%= servers[i].brand %></small>
+                            </p>
+                        </div>
+                        <div class="button">
+                            <p class="star">
+                                <strong>&star;</strong>
+                                <strong>&star;</strong>
+                                <strong>&star;</strong>
+                                <strong>&star;</strong>
+                                <strong>&star;</strong>
+                            </p>
+                            <a href="/contact-us" class="btn_shop_now">MORE </a>
+                        </div>
                     </div>
-                </div>
-            <% } %>
-        </section>
-    <% } %>
+                <% } %>
+            </section>
+        <% } %>
+    <%}%>
+
+   
 
 </main>
 

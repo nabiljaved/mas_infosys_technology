@@ -1,10 +1,21 @@
 const servers = [
-    {model : "Proliant ML 350 Gen 10",img:"/img/tower-server-add/proliant.png", brand:"HPE"},
-    {model : "ThinkSystem ST550",img:"https://www.lenovo.com/medias/lenovo-servers-tower-thinksystem-st550-subseries-hero.png?context=bWFzdGVyfHJvb3R8ODk1OTd8aW1hZ2UvcG5nfGg5Mi9oZjMvOTQ4OTAyMzMwMzcxMC5wbmd8ZWJlNWZiOTdkNGU4ZTE4YTc4ZTUyOGQ1NWI0OGFiYjc4ODQwMTY5YTI2NmQ3ZTY4NDY0Y2Y3NzIyMTZiODc1Yg", brand:"Lenovo"},
-    {model : "Dell Power Vault Storage",img:"https://www.kindpng.com/picc/m/249-2498579_dell-emc-tower-server-hd-png-download.png", brand:"Dell Technology"},
-    {model : "Proliant ML 30 Gen 10",img:"https://assets.ext.hpe.com/is/image/hpedam/s00010510?$superzoom$", brand:"HPE"},
-    {model : "",img:"https://assets.ext.hpe.com/is/image/hpedam/s00010510?$superzoom$", brand:""},
-    {model : "",img:"https://assets.ext.hpe.com/is/image/hpedam/s00010510?$superzoom$", brand:""},
+    {model : "Proliant ML 350 Gen 10",img:"/img/tower-servers/hpml350.png", brand:"HPE"},
+    {model : "ThinkSystem ST550",img:"/img/tower-servers/lenovo-think-system.png", brand:"Lenovo"},
+    {model : "Dell T430 Xeon",img:"/img/tower-servers/dellT430.png", brand:"Dell Technology"},
+    {model : "Proliant ML 110 Gen 10",img:"/img/tower-servers/hpml110.png", brand:"HPE"},
+    {model : "ThinkSystem ST50 V2 Tower",img:"/img/tower-servers/lenovost50v2.png", brand:"Lenovo", },
+    {model : "Power Edge T330",img:"/img/tower-servers/dellT330.png", brand:"Dell Technology"},
+    
+    {model : "Proliant ML 30 Gen 10", img:"/img/tower-servers/hpml30.png", brand:"HPE"},
+    {model : "Power Edge T40 E-2224G", img:"/img/tower-servers/dellT40.png", brand:"Dell Technology"},
+    {model : "ThinkSystem ST250 V2", img:"/img/tower-servers/lenovost250v2.png", brand:"Lenovo"},
+
+   
+    {model : "Proliant ML 10 Gen 9",img:"/img/tower-servers/hpml10.png", brand:"HPE"},
+    {model : "Dell T130 Xeon",img:"/img/tower-servers/dellT130.png", brand:"Dell Technology"},
+    {model : "ThinkSystem ST650",img:"/img/tower-servers/lenovost650v2.png", brand:"Lenovo"},
+
+   
 ]
 
 module.exports = {
