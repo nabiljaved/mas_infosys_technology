@@ -3067,6 +3067,12 @@ transform: scale(1.1);
     }
   }
 
+  @media (max-width:768px) {
+    .site_navbar{
+      margin-top: -39px;
+    }
+  }
+
 .site_navbar_first_item{
   display:flex;
   align-items: center;
