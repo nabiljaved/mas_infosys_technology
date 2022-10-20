@@ -21,6 +21,20 @@ const racks = [
     {model : "HPE ProLiant RL300 Gen11",img:"/img/rack-servers/proliantrl300.png", brand:"HPE"},
     {model : "ThinkSystem SR665 Rack Server",img:"/img/rack-servers/lenovosr665.png", brand:"Lenovo"},
     {model : "Power Edge R740 Rack Server",img:"/img/rack-servers/dellr740.png", brand:"Dell Technology"},
+
+    {model : "HPE ProLiant RL300 Gen11",img:"/img/rack-servers/proliantrl300.png", brand:"HPE"},
+    {model : "ThinkSystem SR665 Rack Server",img:"/img/rack-servers/lenovosr665.png", brand:"Lenovo"},
+    {model : "Power Edge R740 Rack Server",img:"/img/rack-servers/dellr740.png", brand:"Dell Technology"},
+
+    {model : "HPE ProLiant RL300 Gen11",img:"/img/rack-servers/proliantrl300.png", brand:"HPE"},
+    {model : "ThinkSystem SR665 Rack Server",img:"/img/rack-servers/lenovosr665.png", brand:"Lenovo"},
+    {model : "Power Edge R740 Rack Server",img:"/img/rack-servers/dellr740.png", brand:"Dell Technology"},
+
+    {model : "HPE ProLiant RL300 Gen11",img:"/img/rack-servers/proliantrl300.png", brand:"HPE"},
+    {model : "ThinkSystem SR665 Rack Server",img:"/img/rack-servers/lenovosr665.png", brand:"Lenovo"},
+    {model : "Power Edge R740 Rack Server",img:"/img/rack-servers/dellr740.png", brand:"Dell Technology"},
+
+    
 ]
 
 module.exports = {

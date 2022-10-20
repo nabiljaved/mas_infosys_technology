@@ -2,6 +2,7 @@ let span = document.querySelectorAll('#arrows');
 let span2 = document.querySelectorAll('#arrows_rack');
 	let product = document.getElementsByClassName('product')
 	let product_page = Math.ceil(product.length/4);
+	console.log( Math.ceil(product.length/4))
 	let l = 0;
 	let movePer = 25.34;
 	let maxMove = 203;
@@ -18,6 +19,7 @@ let span2 = document.querySelectorAll('#arrows_rack');
 		if (product == 1){l = 0; }
 		for(const i of product)
 		{
+			console.log(i)
 			if (l > maxMove){l = l - movePer;}
 			i.style.left = '-' + l + '%';
 		}
