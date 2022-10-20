@@ -394,7 +394,7 @@ h6,
 } 
 
 .showcase1{
-  transition: all 0.5s ease-in;
+  transition: all 2s ease-in;
 }
 
 
@@ -3062,15 +3062,11 @@ transform: scale(1.1);
   }
 
   @media (min-width:768px) {
-    .site_navbar{
-      margin-top: -40px;
-    }
+   
   }
 
   @media (max-width:768px) {
-    .site_navbar{
-      margin-top: -39px;
-    }
+  
   }
 
 .site_navbar_first_item{

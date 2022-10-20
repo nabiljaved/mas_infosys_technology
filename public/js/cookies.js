@@ -11,15 +11,11 @@ function cookiesPolicyPrompt(){
       document.getElementById("alertCookiePolicy").style.display = 'none'
       
     })
+    Cookies.remove('googtrans')
   }
  
   
 cookiesPolicyPrompt()
 
 
-//   const alertdiv = document.getElementById("alertCookiePolicy").style.display = 'block'
-//   reset.addEventListener('click', function(){
-//     console.log('btn: reset');
-//     Cookies.remove('acceptedCookiesPolicy');
-//     alertCookiePolicy.style.display = 'block'
-//   })
+
