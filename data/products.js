@@ -22,15 +22,15 @@ const racks = [
     {model : "ThinkSystem SR665 Rack Server",img:"/img/rack-servers/lenovosr665.png", brand:"Lenovo"},
     {model : "Power Edge R740 Rack Server",img:"/img/rack-servers/dellr750.png", brand:"Dell Technology"},
 
-    {model : "HPE ProLiant DL 360p G8",img:"/img/rack-servers/proliantdl360p.jpg", brand:"HPE"},
+    {model : "hpe proliant DL160 GEN10 server",img:"/img/rack-servers/proliantdl160gen10.png", brand:"HPE"},
     {model : "ThinkSystem SR590 Xeon Silver",img:"/img/rack-servers/lenovosr590.png", brand:"Lenovo"},
     {model : "Power Edge R240 Xeon Server",img:"/img/rack-servers/dellr750.png", brand:"Dell Technology"},
 
-    {model : "HPE ProLiant DL380 Gen10",img:"/img/rack-servers/proliantdl380.png", brand:"HPE"},
+    {model : "HPE Superdome Flex Server",img:"/img/rack-servers/hpesuperdome.png", brand:"HPE"},
     {model : "ThinkSystem SR850 Rack Server",img:"/img/rack-servers/lenovosr850.png", brand:"Lenovo"},
     {model : "Power Edge R430 Xeon Server",img:"/img/rack-servers/dellr750.png", brand:"Dell Technology"},
 
-    {model : "HPE ProLiant DL20 Gen9",img:"/img/rack-servers/proliantdl380g9.png", brand:"HPE"},
+    {model : "HPE Integrity MC990 X Server",img:"/img/rack-servers/hpeintegrity.png", brand:"HPE"},
     {model : "ThinkSystem SR550 Rack Server",img:"/img/rack-servers/lenovosr550.png", brand:"Lenovo"},
     {model : "Power Edge R440 Xeon Server",img:"/img/rack-servers/dellr750.png", brand:"Dell Technology"},
 
