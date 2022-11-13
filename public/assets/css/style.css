@@ -3080,6 +3080,14 @@ transform: scale(1.1);
   text-align: center;
   margin-bottom: 10px;
   margin-top: 10px;
+  text-decoration: none;
+  display: flex;
+}
+
+.site_navbar_second_item li{
+  display: flex;
+
+  list-style: none;
 }
 
 .site_navbar_second_item a{
@@ -3104,6 +3112,7 @@ transform: scale(1.1);
 .site_navbar_first_item,
 .site_navbar_second_item{
   flex-basis: 100%;
+  justify-content: center;
 }
 
 
