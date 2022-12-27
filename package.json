@@ -10,7 +10,7 @@
     "data:destroy": "node data/seeders -d"
   },
   "engines": {
-    "node": "12.x"
+    "node": "18.x"
   },
   "author": "nabeel javed 03082400619",
   "license": "ISC",
